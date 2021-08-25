@@ -1,5 +1,5 @@
 # GLUE GAMES
-###### GG es una plataforma y comunidad para jugadores de LatAm basada en Argentina, donde vas a poder acceder a un sinfín de juegos, ofertas, novedades y todo lo relacionado al gaming. A su vez vas a poder relacionarte con compañeros alrededor del continente, los cuales te ayudarán en este recorrido dentro de la comunidad, recomendando productos y reseñando los juegos para que siempre tengas lo mejor y encuentres lo que estés buscando.
+###### GG es una plataforma y comunidad para jugadores de habla hispana basada en Argentina, donde vas a poder acceder a un sinfín de juegos, ofertas, novedades y todo lo relacionado al gaming. A su vez vas a poder relacionarte con compañeros alrededor del mundo, los cuales te ayudarán en este recorrido dentro de la comunidad, recomendando productos y reseñando los juegos para que siempre tengas lo mejor y encuentres lo que estés buscando.
 
 ###### Sabemos que hoy en día el público geek es muy amplio: de todas las edades, géneros y gustos. Compran accesorios, minituras y se unen a plataformas de streaming. Teniendo en cuenta esto, apuntamos a hacer una página para todo público mayor de edad, donde se sientan incluidos desde jóvenes adultos hasta adultos de edad mediana. Van a poder sentirse respaldados y podrán encontrar gente con la que compartir este mundo.
 
