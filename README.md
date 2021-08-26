@@ -18,4 +18,4 @@
 3. [Steam](https://store.steampowered.com/)
 4. [Buro de juegos](https://www.bureaudejuegos.com/)
 5. [Good Game](https://www.goodgame.ar/)
-6. [Friki House](https://www.frikihouse.com.ar/)
+6. [GameStop](https://www.gamestop.com/)
