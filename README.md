@@ -9,7 +9,7 @@
 
 - Esteban Prieto: 45 años, trader de futuros y licenciado en Finanzas. 
 - Dante D’angeli: 24 años, estudiante de ingeniería en sistemas de la información y con intenciones de profesionalizarme como programador.
-- Pablo Custodio Cruz: 22 años, escritor, programador y coach ontológico.
+- Pablo Custodio Cruz: 22 años, escritor, futuro desarrollador web fullstack y coach ontológico.
 
 ###### Sitios que inspiraron:
 
