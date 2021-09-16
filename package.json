@@ -1,0 +1,23 @@
+{
+  "name": "gluegames",
+  "version": "1.0.0",
+  "description": "- ###### Esteban Prieto: 45 años, trader de futuros y licenciado en Finanzas. \r - ###### Dante D’angeli: 24 años, estudiante de ingeniería en sistemas de la información y con intenciones de profesionalizarme como programador.\r - ###### Pablo Custodio Cruz: 22 años, escritor, futuro desarrollador web fullstack y coach ontológico.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanteDangeli/grupo_4_GLUE-GAMES.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanteDangeli/grupo_4_GLUE-GAMES/issues"
+  },
+  "homepage": "https://github.com/DanteDangeli/grupo_4_GLUE-GAMES#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
