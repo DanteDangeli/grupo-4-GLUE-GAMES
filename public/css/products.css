@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #333333;
+  --secondary-color: #232323;
+  --type-color: #ffffff;
+  --details-color: #06d4ff;
+}
+
+.product_img {
+  width: 50%;
+}
