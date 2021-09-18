@@ -8,7 +8,7 @@
   --main-color: #333333;
   --secondary-color: #232323;
   --type-color: #ffffff;
-  --details-color: #06d4ff;
+  --details-color: #069bff;
 }
 
 body {
@@ -117,17 +117,111 @@ ul {
   top: 2px;
 }
 
+nav ul li a i {
+  font-size: 16px;
+}
+
 nav ul li a {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 200;
   color: var(--type-color);
   text-decoration: none;
   padding: 0 15px 0 15px;
-  transition: color 450ms;
+  transition: color 450ms, font-weight 50ms;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
 }
 
 nav ul li a:hover {
   color: var(--details-color);
+  font-weight: 400;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.container-body-footer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 97%;
+  padding: 20px;
+}
+
+.footer-info {
+  max-width: 500px;
+}
+
+.footer-info h1 {
+  font-size: 22px;
+}
+
+.footer-info p {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.footer-redes {
+  display: flex;
+}
+
+.footer-redes h1 {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.footer-redes a i {
+  font-size: 34px;
+  color: var(--type-color);
+}
+
+.redes {
+  display: flex;
+  margin-right: 25px;
+  margin-top: 70px;
+  transition: color 450ms;
+}
+
+.redes:hover {
+  color: var(--details-color);
+}
+
+.footer-redes div {
+  position: relative;
+  right: 173px;
+}
+
+.footer-redes label {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.container-end-footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-top: solid 1px var(--main-color);
+}
+
+.container-end-footer div {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+}
+
+.container-end-footer .disclaimer {
+  position: relative;
+  left: 43px;
+  top: 3px;
+}
+
+.container-end-footer img {
+  width: 100px;
+  position: relative;
+  right: 43px;
+  top: 7px;
 }
 
 @media (min-width: 1200px) {
