@@ -203,6 +203,7 @@ footer {
   justify-content: space-between;
   position: relative;
   border-top: solid 1px var(--main-color);
+  padding: 10px;
 }
 
 .container-end-footer div {
@@ -213,7 +214,7 @@ footer {
 
 .container-end-footer .disclaimer {
   position: relative;
-  left: 43px;
+  left: 37px;
   top: 3px;
 }
 
