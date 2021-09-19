@@ -19,6 +19,7 @@ body {
 
 header {
   background-color: var(--secondary-color);
+  width: 100%;
 }
 
 .box {
@@ -165,6 +166,7 @@ footer {
 
 .footer-redes {
   display: flex;
+  flex-direction: column;
 }
 
 .footer-redes h1 {
@@ -188,11 +190,6 @@ footer {
   color: var(--details-color);
 }
 
-.footer-redes div {
-  position: relative;
-  right: 173px;
-}
-
 .footer-redes label {
   margin-left: 15px;
   margin-top: 5px;
@@ -200,6 +197,7 @@ footer {
 
 .container-end-footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   position: relative;
   border-top: solid 1px var(--main-color);
@@ -211,19 +209,11 @@ footer {
   flex-direction: column;
   height: 30px;
 }
-
-.container-end-footer .disclaimer {
-  position: relative;
-  left: 37px;
-  top: 3px;
-}
-
 .container-end-footer img {
-  width: 100px;
   position: relative;
-  right: 43px;
-  top: 7px;
-}
+  top: 30px;
+  width: 100px;
+  }
 
 @media (min-width: 1200px) {
   .main-header {
@@ -236,4 +226,30 @@ footer {
   .container-1 {
     display: block;
   }
+  .footer-redes{
+    flex-direction: row;
+  }
+
+  .footer-redes div {
+    position: relative;
+    right: 173px;
+  }
+  
+  .container-end-footer .disclaimer {
+    position: relative;
+    left: 37px;
+    top: 3px;
+  }
+  
+  .container-end-footer img {
+    width: 100px;
+    position: relative;
+    right: 43px;
+    top: 7px;
+  }
+
+  .container-end-footer{
+    flex-direction: row;
+  }
+
 }

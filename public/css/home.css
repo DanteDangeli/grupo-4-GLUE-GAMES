@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+    --main-color: #333333;
+    --secondary-color: #232323;
+    --type-color: #ffffff;
+    --details-color: #069bff;
+  }
+
+main {
+    padding: 20px 0 0 0;
+}
+
+.carrousel{
+    display: none;
+}
+
+.carrousel article img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+.carrousel article label {
+    background-color: #00000062;
+    display: none;
+    position: relative;
+    padding: 0 20px 0 20px;
+    text-align: left;
+    bottom: 175px;
+    left: 7%;
+    max-width: 20%;
+}
+
+.container-los-mas-vendidos{
+    padding-bottom: 60px;
+}
+
+.productos-en-venta{
+    padding: 20px;
+}
+
+.productos-en-venta p {
+    position:relative;
+    background-color: #00000060;
+    bottom: 25px;
+    left: 32px;
+    border-end-end-radius: 7px;
+    border-end-start-radius: 7px;
+    width: 80%;
+}
+
+.productos-en-venta div a {
+ text-decoration: none;
+ text-align: center;
+ color: var(--type-color);
+}
+
+.productos-en-venta img{
+    display: block;
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.container-masvendidos{
+    padding: 20px;
+    display: block;
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+.container-vendidos-texto{
+    text-align: center;
+    font-size: 34px;
+}
+
+.container-masvendidos div {
+    padding: 20px;
+}
+
+.container-masvendidos img{
+    display: block;
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
+}
+
+.container-vendidos-texto h1 span{
+    color: var(--details-color);
+}
+
+
+@media (min-width:1200px) {
+
+    main {
+        padding: 60px 0 0 0;
+    }
+    
+
+    .carrousel{
+        display: block;
+    }
+
+    .carrousel article label {
+        display: block;
+    }
+
+    .carrousel article img {
+        max-width: 90%;
+        border-radius: 10px;
+        transition: box-shadow 450ms;
+    }
+
+    .carrousel article img:hover {
+        box-shadow: 0px 0px 20px rgb(100, 100, 100);
+    }
+
+    .productos-en-venta img{
+        width: 64%;
+        transition: box-shadow 450ms, width 450ms;
+    }
+
+    .productos-en-venta img:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 68%;
+    }
+
+    .productos-en-venta{
+        display: flex;
+        padding: 20px 0 70px 0;
+    }
+
+    .productos-en-venta p {
+        bottom: 25px;
+        left: 83px;
+        width: 64%;
+    }
+    .container-consolas p{
+        left: 84px;
+    }
+
+    .container-masvendidos{
+        width: 80%;
+        margin: auto;
+    }
+
+    .container-imagenes-masvendido{
+        display: flex;
+    }
+
+    .container-masvendidos img{
+        width: 60%;
+        transition: box-shadow 1s;
+    }
+
+    .container-masvendidos img:hover{
+        box-shadow: 0px 0px 30px rgb(100, 100, 100);
+    }
+
+    .mas-vendido3 {
+        width: 95%;
+    }
+
+
+    .container-vendidos-texto h1{
+        background-color: var(--main-color);
+        max-width: 800px;
+        margin: auto;
+    }
+    
+}
