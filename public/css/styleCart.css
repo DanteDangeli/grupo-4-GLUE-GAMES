@@ -1,0 +1,36 @@
+
+.cart-view {
+    border: 1px solid #069bff;
+}
+
+.cabecera-cart {
+    width: 100vw;
+    border: 1px solid #069bff;
+}
+
+.cart-desgloce {
+    width: 100vw;
+    background-color: white;
+
+}
+
+.producto img {
+    width: 100px;
+    height: 100px;
+}
+
+.producto {
+    color: black;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.resumen-pay {
+    width: 100vw;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: #757373
+}
+
+.codigo-postal {
+    border-bottom: solid 1px black;
+}
