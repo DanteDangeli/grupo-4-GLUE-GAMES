@@ -7,7 +7,7 @@ const publicPath = path.resolve(__dirname, './public')
 
 app.use(express.static(publicPath));
 
-app.listen('3000', () => {
+app.listen('8000', () => {
     console.log('Servidor funcionando');
 });
 
@@ -17,4 +17,8 @@ app.get('/', (req,res) => {
 
 app.get('/productDetail', (req,res) => {
     res.sendFile(path.resolve(__dirname,'./views/productDetail.html'))
+})
+
+app.get('/productCart', (req,res) => {
+    res.sendFile(path.resolve(__dirname,'./views/productCart.html'))
 })
