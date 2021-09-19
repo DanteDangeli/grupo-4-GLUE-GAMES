@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap">
     <script src="https://kit.fontawesome.com/cd8fa35da4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styleCart.css">
+    <script src="https://kit.fontawesome.com/9f6b02faaf.js" crossorigin="anonymous"></script>
     <title>Mi carrito</title>
 </head>
 <body>
@@ -48,17 +49,22 @@
 
             <div class="producto">
                 <img src="/images/Coleccionables/Gengar-Plush/1.webp">
-                <H3>producto</H3>
-                <p>detalle de producto</p>
+                <p class="tipo-product">producto tipo x</p>
+                <p class="detalle-minimo">coleccionable, modelo especial...</p>
+                <p class="envio-gratis"> 
+                    Envio gratis
+                    <i class="fas fa-bolt"></i>
+                    FULL
+                </p>
                 <p>importe $00.00</p>
                 <div class="select-cant">
-                    <a></a>
-                    <p>X</p>
-                    <a></a>
+                    <i class="fas fa-chevron-left"></i>
+                    <p>1</p>
+                    <i class="fas fa-chevron-right"></i>
                 </div>
                 <div class="botones">
-                    <input type="button" name="ELIMINAR">
-                    <input type="button" name="GUARDAR">
+                    <div>ELIMINAR</div>
+                    <div>GUARDAR</div>
                 </div>
             </div>
             </article>
@@ -69,7 +75,7 @@
                 <h4>Total con envío</h4>
                 <h3>$00.00</h3>
                 <p>meses sin intereses</p>
-                <input type="button">
+                <div class="boton-continuar">Continuar compra</div>
             </div>
         </section>   
         <section class="algoritm">
