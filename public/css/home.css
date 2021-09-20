@@ -95,6 +95,21 @@ main {
     color: var(--details-color);
 }
 
+.titulo-ofertas {
+    text-align: center;
+    font-size: 34px;
+}
+.ofertas div {
+    padding: 20px 0;
+}
+
+.ofertas img{
+    display: block;
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
 
 @media (min-width:1200px) {
 
@@ -138,11 +153,11 @@ main {
 
     .productos-en-venta p {
         bottom: 25px;
-        left: 83px;
+        left: 85px;
         width: 64%;
     }
     .container-consolas p{
-        left: 84px;
+        left: 86px;
     }
 
     .container-masvendidos{
@@ -173,5 +188,34 @@ main {
         max-width: 800px;
         margin: auto;
     }
-    
+
+    .titulo-ofertas{
+        display: none;
+    }
+
+    .ofertas{
+        display: none;
+        justify-content: space-around;
+    }
+
+    .ofertas img {
+        display: flex;
+        width: 50%;
+    }
+
+    .oferta.principal {
+        display: flex;
+        align-items: flex-start;
+        width: 30%;
+    }
+    div.otras-ofertas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    .ofertaa,
+    .ofertab{
+        display: flex;
+    }
 }
