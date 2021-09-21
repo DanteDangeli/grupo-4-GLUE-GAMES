@@ -13,7 +13,9 @@
 }*/
 
 .body{
-    background: #f2f2f2;
+    /*background: #f2f2f2;*/
+    background: #333333;
+
     /*font-family: sans-serif;*/
 }
 
@@ -21,30 +23,33 @@
 .hero{
   width: 100%;
   height: 100%;
-  width: 90%;
   margin: 0 auto;
   overflow: hidden;
   display:  flex;
   flex-direction: column;
-  justify-content: center;
+  
 
  }
 
-
-.hero_picture{/*
+/*ESTE ES ITEM DE LA IMAGEN GRANDE*/
+.hero_picture{
+  /*
   margin-bottom: 1em;*/
-}
 
+  }
+
+/*ESTO ES LA IMAGEN*/
 .hero_img{
-  display: block;
+  display: inline-block;
   width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
+  max-width: 600px
+  margin: auto;
+  }
 
+/*ESTE ES ITEM DE LOS TXT Y BOTONES DE LA DERECHA*/
 .hero_texts{
-  flex-basis: 40%;
-}
+  /*flex-basis: 40%;*/
+  }
 
 .hero_paragraph{
   line-height: 1.5;
@@ -71,25 +76,68 @@
 
 
 
-
+/*PARA EL MODO PANTALLA GRANDE*/
 
 @media screen and (min-width:850px) {
+
+/*LA CLASE HERO ES UN FLEX CONTIENE TANTO LA FOTO GRANDE COMO EL TITULO Y BOTONES DE LA DERECHA*/
+
   .hero {
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin: auto;
+    justify-content: center;
+    /*margin: 0 auto;*/
+    /*margin: auto*/
     width: 97%;
-    padding: 20px;
-  
-  
+       
+      }
+
+ /*LA CLASE FOTOS ES UN FLEX QUE CONTIENE LAS FOTOS CHICAS*/
+
+   .fotos{
+      width: 97%;
+      height: 20%;
+      display:  flex;
+      flex-direction: row;
+      justify-content: left;
+      flex-wrap: nowrap;
+      margin: auto;
+      padding: 0px 20px 20px 100px;
+        
+      }
+
+/*LA CLASE hero_picture  ES EL ITEM DE LA IZQUIERDA QUE CONTIENE LA FOTO GRANDE*/
+
+  .hero_picture{
+      /*
+      margin-bottom: 1em;*/
+      width: 50%;
+      padding-left: 15%; 
+      /*padding-left: 27em;   */
+          }
+
+/*LA CLASE hero_img  ES LA IMAGEN DENTRO DE hero_picture*/     
+     
+    .hero_img{
+        /*margin-right: : 10em;
+        display: inline-block;*/
+        
+      
+      }
+
+/*LA CLASE hero_texts  ES EL ITEM DE LA DERECHA QUE CONTIENE TITULO Y BOTONES*/
+
+      .hero_texts{
+        /*flex-basis: 40%;*/
+        width: 50%;
+        justify-content: center
+      }
   
   }
 
-  /*.hero_picture{
-    flex-grow: 1;
-    order: 1;
-  }*/
+/*HASTA ACA PANTALLA GRANDE*/
+
+
+
 
   .hero_img{
     max-width: 600px;
@@ -106,19 +154,21 @@
   justify-content: left;
   flex-wrap: nowrap;
   margin: auto;
-  padding: 0px 20px 20px 140px;
+  padding: 0px 20px 20px 100px;
   
 }
 
 
 .fotos_picture{
   width: 9%;
-  height: 15%;
+  height: 20%;
+  /*border: white;
+  border-style: solid;*/
 }
 
 .foto_img{
   width: 100%;
-  height: 50%;
+  height: 60%;
    }
 
 
@@ -131,9 +181,12 @@
 }
 
 .detalle-info {
-  max-width: 500px;
+  max-width: 800px;
 }
 
+.detalle-txt {
+  font-size: 20px;  
+}
 
 /*.product_img {
   width: 50%;
