@@ -19,15 +19,10 @@ body {
 
 header {
   background-color: var(--secondary-color);
-  width: 100%;
 }
 
-.box {
-  width: 35%;
-}
 .container-1 {
   display: none;
-  width: 100%;
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
@@ -88,23 +83,23 @@ header {
 }
 
 img.logo {
-  position: relative;
-  top: 5px;
-  width: 150px;
+  width: 250px;
 }
 
 .logo {
   display: block;
+  margin: auto;
 }
 
 .main-header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 20px;
 }
 
-ul {
-  display: flex;
+li {
+  padding: 10px 0;
   list-style: none;
 }
 
@@ -114,15 +109,14 @@ ul {
 }
 
 .header-secondnav {
-  position: relative;
-  top: 2px;
+  text-align: center;
 }
 
-nav ul li a i {
+li a i {
   font-size: 16px;
 }
 
-nav ul li a {
+li a {
   font-size: 14px;
   font-weight: 200;
   color: var(--type-color);
@@ -133,7 +127,7 @@ nav ul li a {
   text-transform: uppercase;
 }
 
-nav ul li a:hover {
+nav li a:hover {
   color: var(--details-color);
   font-weight: 400;
 }
@@ -208,25 +202,56 @@ footer {
   display: flex;
   flex-direction: column;
   height: 30px;
+  padding: 0 0 0 25px;
 }
+
 .container-end-footer img {
   position: relative;
   top: 30px;
   width: 100px;
+}
+
+@media (min-width: 390px) {
+  li {
+    display: flex;
+    padding: 0;
   }
 
-@media (min-width: 1200px) {
-  .main-header {
-    margin: auto;
+  .header-secondnav {
+    display: flex;
+    align-self: center;
   }
+
+  img.logo {
+    width: 150px;
+  }
+
+  .main-header {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 789px) {
   .header-firstnav {
     display: flex;
-    align-items: center;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  img.logo {
+    position: relative;
+    top: 5px;
   }
   .container-1 {
     display: block;
   }
-  .footer-redes{
+
+  .box {
+    width: 30%;
+  }
+
+  .footer-redes {
     flex-direction: row;
   }
 
@@ -234,13 +259,17 @@ footer {
     position: relative;
     right: 173px;
   }
-  
+
+  .container-end-footer div {
+    padding: 0;
+  }
+
   .container-end-footer .disclaimer {
     position: relative;
     left: 37px;
     top: 3px;
   }
-  
+
   .container-end-footer img {
     width: 100px;
     position: relative;
@@ -248,8 +277,7 @@ footer {
     top: 7px;
   }
 
-  .container-end-footer{
+  .container-end-footer {
     flex-direction: row;
   }
-
 }
