@@ -193,6 +193,7 @@ main {
   .ofertas img {
     display: flex;
     width: 50%;
+    transition: width 450ms, box-shadow 450ms;
   }
 
   .oferta-principal {
@@ -225,5 +226,10 @@ main {
   .titulo-ofertas {
     text-align: center;
     font-size: 50px;
+  }
+
+  .ofertas img:hover {
+    width: 60%;
+    box-shadow: 0px 0px 30px rgb(100, 100, 100);
   }
 }
