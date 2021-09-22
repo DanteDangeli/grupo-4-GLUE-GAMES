@@ -1,221 +1,229 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  :root {
-    --main-color: #333333;
-    --secondary-color: #232323;
-    --type-color: #ffffff;
-    --details-color: #069bff;
-  }
-
-main {
-    padding: 20px 0 0 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.carrousel{
-    display: none;
+:root {
+  --main-color: #333333;
+  --secondary-color: #232323;
+  --type-color: #ffffff;
+  --details-color: #069bff;
+}
+
+main {
+  padding: 20px 0 0 0;
+}
+
+.carrousel {
+  display: none;
 }
 
 .carrousel article img {
-    display: block;
-    max-width: 100%;
-    margin: auto;
+  display: block;
+  max-width: 100%;
+  margin: auto;
 }
 
 .carrousel article label {
-    background-color: #00000062;
-    display: none;
-    position: relative;
-    padding: 0 20px 0 20px;
-    text-align: left;
-    bottom: 175px;
-    left: 7%;
-    max-width: 20%;
+  background-color: #00000062;
+  display: none;
+  position: relative;
+  padding: 0 20px 0 20px;
+  text-align: left;
+  bottom: 175px;
+  left: 7%;
+  max-width: 20%;
 }
 
-.container-los-mas-vendidos{
-    padding-bottom: 60px;
+.container-los-mas-vendidos {
+  padding-bottom: 60px;
 }
 
-.productos-en-venta{
-    padding: 20px;
+.productos-en-venta {
+  padding: 20px;
 }
 
 .productos-en-venta p {
-    position:relative;
-    background-color: #00000060;
-    bottom: 25px;
-    left: 32px;
-    border-end-end-radius: 7px;
-    border-end-start-radius: 7px;
-    width: 80%;
+  position: relative;
+  background-color: #00000060;
+  bottom: 25px;
+  left: 32px;
+  border-end-end-radius: 7px;
+  border-end-start-radius: 7px;
+  width: 80%;
 }
 
 .productos-en-venta div a {
- text-decoration: none;
- text-align: center;
- color: var(--type-color);
+  text-decoration: none;
+  text-align: center;
+  color: var(--type-color);
 }
 
-.productos-en-venta img{
-    display: block;
-    margin: auto;
-    width: 80%;
-    border-radius: 10px;
+.productos-en-venta img {
+  display: block;
+  margin: auto;
+  width: 80%;
+  border-radius: 10px;
 }
 
-.container-masvendidos{
-    padding: 20px;
-    display: block;
-    width: 100%;
-    background-color: var(--secondary-color);
+.container-masvendidos {
+  padding: 20px;
+  display: block;
+  width: 100%;
+  background-color: var(--secondary-color);
 }
 
-.container-vendidos-texto{
-    text-align: center;
-    font-size: 34px;
+.container-vendidos-texto {
+  text-align: center;
+  font-size: 34px;
 }
 
 .container-masvendidos div {
-    padding: 20px;
+  padding: 20px;
 }
 
-.container-masvendidos img{
-    display: block;
-    border-radius: 10px;
-    margin: auto;
-    width: 80%;
+.container-masvendidos img {
+  display: block;
+  border-radius: 10px;
+  margin: auto;
+  width: 80%;
 }
 
-.container-vendidos-texto h1 span{
-    color: var(--details-color);
+.container-vendidos-texto h1 span {
+  color: var(--details-color);
 }
 
 .titulo-ofertas {
-    text-align: center;
-    font-size: 34px;
-}
-.ofertas div {
-    padding: 20px 0;
+  text-align: center;
+  font-size: 34px;
 }
 
-.ofertas img{
+.ofertas div img {
+  padding: 20px 0;
+}
+
+.ofertas img {
+  display: block;
+  margin: auto;
+  width: 80%;
+  border-radius: 10px;
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 60px 0 0 0;
+  }
+
+  .carrousel {
     display: block;
-    margin: auto;
-    width: 80%;
+  }
+
+  .carrousel article label {
+    display: block;
+  }
+
+  .carrousel article img {
+    max-width: 90%;
     border-radius: 10px;
-}
+    transition: box-shadow 450ms;
+  }
 
+  .carrousel article img:hover {
+    box-shadow: 0px 0px 20px rgb(100, 100, 100);
+  }
 
-@media (min-width:1200px) {
+  .productos-en-venta img {
+    width: 64%;
+    transition: box-shadow 450ms, width 450ms;
+  }
 
-    main {
-        padding: 60px 0 0 0;
-    }
-    
+  .productos-en-venta img:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 68%;
+  }
 
-    .carrousel{
-        display: block;
-    }
+  .productos-en-venta {
+    display: flex;
+    padding: 20px 0 70px 0;
+  }
 
-    .carrousel article label {
-        display: block;
-    }
+  .productos-en-venta p {
+    bottom: 25px;
+    left: 85px;
+    width: 64%;
+  }
+  .container-consolas p {
+    left: 86px;
+  }
 
-    .carrousel article img {
-        max-width: 90%;
-        border-radius: 10px;
-        transition: box-shadow 450ms;
-    }
+  .container-masvendidos {
+    width: 80%;
+    margin: auto;
+  }
 
-    .carrousel article img:hover {
-        box-shadow: 0px 0px 20px rgb(100, 100, 100);
-    }
+  .container-imagenes-masvendido {
+    display: flex;
+  }
 
-    .productos-en-venta img{
-        width: 64%;
-        transition: box-shadow 450ms, width 450ms;
-    }
+  .container-masvendidos img {
+    width: 60%;
+    transition: box-shadow 1s;
+  }
 
-    .productos-en-venta img:hover {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 68%;
-    }
+  .container-masvendidos img:hover {
+    box-shadow: 0px 0px 30px rgb(100, 100, 100);
+  }
 
-    .productos-en-venta{
-        display: flex;
-        padding: 20px 0 70px 0;
-    }
+  .mas-vendido3 {
+    width: 95%;
+  }
 
-    .productos-en-venta p {
-        bottom: 25px;
-        left: 85px;
-        width: 64%;
-    }
-    .container-consolas p{
-        left: 86px;
-    }
+  .container-vendidos-texto h1 {
+    background-color: var(--main-color);
+    max-width: 800px;
+    margin: auto;
+  }
 
-    .container-masvendidos{
-        width: 80%;
-        margin: auto;
-    }
+  .ofertas {
+    display: flex;
+  }
 
-    .container-imagenes-masvendido{
-        display: flex;
-    }
+  .ofertas img {
+    display: flex;
+    width: 50%;
+  }
 
-    .container-masvendidos img{
-        width: 60%;
-        transition: box-shadow 1s;
-    }
+  .oferta-principal {
+    display: flex;
+    width: 70%;
+    padding: 0 0 20px 0;
+  }
 
-    .container-masvendidos img:hover{
-        box-shadow: 0px 0px 30px rgb(100, 100, 100);
-    }
+  .ofertas div img {
+    padding: 0;
+  }
 
-    .mas-vendido3 {
-        width: 95%;
-    }
+  div.otras-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+  }
 
+  .ofertab {
+    padding: 20px 0 0 0;
+  }
 
-    .container-vendidos-texto h1{
-        background-color: var(--main-color);
-        max-width: 800px;
-        margin: auto;
-    }
+  .ofertaa,
+  .ofertab {
+    display: flex;
+    position: relative;
+    right: 150px;
+  }
 
-    .titulo-ofertas{
-        display: none;
-    }
-
-    .ofertas{
-        display: none;
-        justify-content: space-around;
-    }
-
-    .ofertas img {
-        display: flex;
-        width: 50%;
-    }
-
-    .oferta.principal {
-        display: flex;
-        align-items: flex-start;
-        width: 30%;
-    }
-    div.otras-ofertas{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 50%;
-    }
-    .ofertaa,
-    .ofertab{
-        display: flex;
-    }
+  .titulo-ofertas {
+    text-align: center;
+    font-size: 50px;
+  }
 }

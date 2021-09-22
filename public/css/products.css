@@ -42,7 +42,7 @@
 .hero_img{
   display: inline-block;
   width: 100%;
-  max-width: 600px
+  max-width: 600px;
   margin: auto;
   }
 
@@ -111,7 +111,9 @@
       /*
       margin-bottom: 1em;*/
       width: 50%;
-      padding-left: 15%; 
+      /*padding-left: 15%; */
+      justify-content:center;
+      display: flex;
       /*padding-left: 27em;   */
           }
 
@@ -132,7 +134,25 @@
         justify-content: center
       }
   
+
+      /*.containerdetalle {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 97%;
+        padding: 100px;
+      }
+      
+      .detalle-info {
+        max-width: 800px;
+      }
+      
+      .detalle-txt {
+        font-size: 500px;  
+      }*/
+
   }
+
 
 /*HASTA ACA PANTALLA GRANDE*/
 
@@ -144,7 +164,6 @@
   }
 
 
-}
 
 .fotos{
   width: 97%;
@@ -177,15 +196,17 @@
   flex-direction: column;
   margin: auto;
   width: 97%;
-  padding: 20px;
+  padding-left: 100px;
+  padding-top: 1%;
+  padding-bottom: 2%;
 }
 
 .detalle-info {
-  max-width: 800px;
+  max-width: 1300px;
 }
 
 .detalle-txt {
-  font-size: 20px;  
+  font-size: 25px;  
 }
 
 /*.product_img {
