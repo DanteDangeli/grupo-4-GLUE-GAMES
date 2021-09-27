@@ -169,10 +169,11 @@ main {
 
   .container-masvendidos img {
     width: 60%;
-    transition: box-shadow 1s;
+    transition: box-shadow 1s, width 450ms;
   }
 
   .container-masvendidos img:hover {
+    width: 70%;
     box-shadow: 0px 0px 30px rgb(100, 100, 100);
   }
 
