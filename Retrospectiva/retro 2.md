@@ -1,6 +1,6 @@
-# RETROSPECTIVA 1ER SPRINT
+# RETROSPECTIVA 2DO SPRINT
 
-##### Por aquí compartimos nuestro analisis y conclusiónes de nuestro primer sprint en equipo.
+##### Por aquí compartimos nuestro analisis y conclusiónes de nuestro segundo sprint en equipo.
 
 ---------------
 * Empezar a hacer
