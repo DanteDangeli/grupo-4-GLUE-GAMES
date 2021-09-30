@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap">
+    <script src="https://kit.fontawesome.com/cd8fa35da4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style-login.css">
+    <title>registro</title>
+</head>
+<body>
+
+  <form method="POST" action="/registrar-nuevo-usuario">
+
+    <a href="/"><img src="/images/logo-gluegames.png" alt="logo" class="logo"></a>
+
+    <h1>Ingresa con tu cuenta GG</h1>
+
+<div class="formulario">
+    <div>
+        <label for="usuario">Nombre de usuario</label>
+        <input type="text" name="usuario" id="usuario" class="control" placeholder="">
+    </div>
+
+    <div>
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="Contraseña" id="contraseña" class="control" placeholder="">
+    </div>
+   
+    <div>
+        <input type="checkbox" name="mantener" id="mantener">
+        <label class="mantener" for="mantener">Mantener mi sesión iniciada</label>
+    </div>
+
+    <div>
+
+        <button type="submit">Iniciar sesión</button>
+ 
+     </div>
+
+    <div>
+        <p><a href="#">¿Olvidaste tu contraseña? </a></p>
+    </div>
+
+    <div>
+        <p>¿No tienes cuenta en GG? <a href="/registro">Registrarse</a></p>
+    </div>
+</div>
+</form>
+</body>
+</html>
