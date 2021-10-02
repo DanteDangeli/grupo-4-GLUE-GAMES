@@ -13,16 +13,21 @@
 
 </head>
 <body>
-    <header class="main-header">
+   
+    <%-include('./partials/header')%>
+   
+   <!-- <header class="main-header">
 
         <div>
-            <a href="/"><img src="/images/logo-gluegames.png" class="logo" alt="logo GlueGames"></a>
+           <a href="/"><img src="/images/logo-gluegames.png" class="logo" alt="logo GlueGames"></a>
         </div>
 
         <nav class="header-firstnav">
-                <li><a href="#">Tienda</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Soporte</a></li>
+        
+                <li><a disabled href="#">Tienda</a></li>
+                <li><a disabled href="#">Acerca de</a></li>
+                <li><a disabled href="#">Soporte</a></li>
+        
         </nav>
 
         <div class="box">
@@ -32,13 +37,15 @@
             </div>
           </div>
 
-    <nav class="header-secondnav">
-            <li><a href="#">Iniciar sesión</a></li>
-            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-    </nav>
-    
-       
+        <nav class="header-secondnav">
+            
+                <li><a href="/login">Iniciar sesión</a></li>
+                <li><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></li>
+        
+        </nav>
+
     </header>
+-->
 
     <!--main>
         <section class="last-visit">
