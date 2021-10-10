@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap">
+    <script src="https://kit.fontawesome.com/cd8fa35da4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style-registro.css">
+    <title>registro</title>
+</head>
+<body>
+
+  <form method="POST" action="/registrar-nuevo-usuario" >
+   <a href="/"> <img src="/images/logo-gluegames.png" alt="logo" class="logo"> </a>
+
+
+   <div class="formulario">
+    <div>
+        <h2>Nuevo producto</h2>
+    </div>
+    <div>
+        <label for="nombreProducto">Nombre del producto</label>
+        <input type="text" name="producto" id="nombreProducto" class="control">
+    </div>
+    <div>
+        <label for="descripcion">Descripcion</label>
+        <textarea name="descripcion" id="descripcion" class="control"> </textarea>
+    </div>
+
+    <div>
+        <label for="fotoProducto">Foto del producto</label>
+        <input type="file" name="fotoProducto" id="fotoProducto">
+    </div>
+
+   <div>
+       <h4>categoria del producto</h4>
+       <label for="categoria-videojuegos">videojuegos</label>
+       <input type="radio" name="categoria-videojuegos" value="videojuegos">
+
+       <label for="categoria-consolas">consolas</label>
+       <input type="radio" name="categoria-consolas" value="consolas">
+
+       <label for="categoria-coleccionables">coleccionables</label>
+       <input type="radio" name="categoria-coleccionables" value="coleccionables">
+
+       <label for="categoria-accesorios">accesorios</label>
+       <input type="radio" name="categoria-accesorios" value="accesorios">
+
+   </div>
+   <div>
+       <label for="marca">marca</label>
+       <input type="text" name="marca" id="marca" class="marca">
+   </div>
+
+   <div>
+    <label for="precio">precio</label>
+    <input type="text" name="precio" id="precio" class="precio">
+    </div>
+   
+    <div class="botones">
+
+       <button type="submit">Guardar</button>
+
+        <button type="reset">Borrar</button>
+    </div>
+</div>
+</form>
+</body>
+</html>

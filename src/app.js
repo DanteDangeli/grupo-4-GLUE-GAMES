@@ -10,6 +10,8 @@ const productDetail = require('./routes/productDetail');
 
 const registro = require('./routes/registro');
 
+const crearPorducto = require('./routes/crearProducto');
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -25,6 +27,8 @@ app.use('/', productCart);
 app.use('/', productDetail);
 
 app.use('/', registro);
+
+app.use('/', crearPorducto);
 
 app.listen('3000', () => {
     console.log('Servidor funcionando');
