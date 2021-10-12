@@ -35,10 +35,34 @@
     * Se acordó ver el tema CRUD de playground en el caso de que tengamos que hacer el back del punto 7.
 
 
-* Juevez 10.07.2021
+* Jueves 10.07.2021
   * ¿Que se hizo?
     * Se hizo la restropectiva.
     * Se actualizó el tablero de trabajo.
     * Se revisaron los puntos, se comprendieron.
   * ¿Que se va a hacer?
     * Se acordó ponerse al dia con playground para poder hacer los ejercicios.
+
+
+* Domingo 10.10.2021
+  * Se acordó que a al formulario de carga de productos se le agregue la valoracion en estrellas y la condicion del producto.
+  * Task #1: Lo hace Esteban.
+    * Los se van a usar los siguientes campos en el json de los productos:
+      * ID
+      * producto
+      * descripcion
+      * fotoProducto
+      * Categoría: categoria-videojuegos, categoria-consolas, categoria-coleccionables, categoria-accesorios
+      * marca
+      * condicion
+      * precio
+  * Task #2: Lo hace Fer.
+    * Los se van a usar los siguientes campos en el json de los usuarios:
+      * username
+      * nombre
+      * email
+      * domicilio
+      * Contraseña
+      * fechaNacimiento
+      * foto-perfil
+  * Task #3: CRUD de productos - Lo hacen Pablo & Dante
