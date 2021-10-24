@@ -7,4 +7,3 @@ let registroController = {
 
 }
 
-module.exports = registroController;

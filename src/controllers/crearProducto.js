@@ -7,4 +7,3 @@ let CrearProductoController = {
 
 }
 
-module.exports = CrearProductoController;

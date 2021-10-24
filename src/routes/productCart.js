@@ -6,4 +6,3 @@ const productCartController = require('../controllers/productCartController');
 
 router.get('/productCart', productCartController.productCart);
 
-module.exports = router;
