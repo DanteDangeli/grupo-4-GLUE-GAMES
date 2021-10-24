@@ -1,20 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-const productsFilepath = path.join(__dirname, '../data/productsDatabase.json');
-const products = JSON.parse(fs.readFileSync(productsFilepath,'utf-8'));
-
-
-const controller = {
-    // ruta a todos los productos
-index: (req, res) => {
-    res.render('index', {products})
-}
-};
-
-module.exports= controller;
-=======
 const productFilepath = path.join(__dirname, '../data/productsDatabase.json');
 const products = JSON.parse(fs.readFileSync(productFilepath, 'utf-8'));
 
@@ -36,4 +22,3 @@ const controller = {
 };
 
 module.exports=controller;
->>>>>>> 3388d7cc3fdc878185dabb4ba2a528b44da67a4f

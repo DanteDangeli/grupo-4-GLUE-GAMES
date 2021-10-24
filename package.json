@@ -20,12 +20,8 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-<<<<<<< HEAD
-    "fs": "0.0.1-security",
-=======
     "method-override": "^3.0.0",
     "multer": "^1.4.3",
->>>>>>> 3388d7cc3fdc878185dabb4ba2a528b44da67a4f
     "nodemon": "^2.0.14"
   }
 }
