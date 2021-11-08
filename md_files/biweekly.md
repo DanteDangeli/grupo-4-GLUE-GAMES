@@ -1,4 +1,4 @@
-# BYWEEKLY STANDUP
+# BIWEEKLY STANDUP
 
 
 ---------------
@@ -45,24 +45,47 @@
 
 
 * Domingo 10.10.2021
-  * Se acordó que a al formulario de carga de productos se le agregue la valoracion en estrellas y la condicion del producto.
-  * Task #1: Lo hace Esteban.
-    * Los se van a usar los siguientes campos en el json de los productos:
-      * ID
-      * producto
-      * descripcion
-      * fotoProducto
-      * Categoría: categoria-videojuegos, categoria-consolas, categoria-coleccionables, categoria-accesorios
-      * marca
-      * condicion
-      * precio
-  * Task #2: Lo hace Fer.
-    * Los se van a usar los siguientes campos en el json de los usuarios:
-      * username
-      * nombre
-      * email
-      * domicilio
-      * Contraseña
-      * fechaNacimiento
-      * foto-perfil
-  * Task #3: CRUD de productos - Lo hacen Pablo & Dante
+  * ¿Que se hizo?
+    * Se acordó que a al formulario de carga de productos se le agregue la valoracion en estrellas y la condicion del producto.
+  * ¿Que se va a hacer?
+    * Task #1: Lo hace Esteban.
+      * Los se van a usar los siguientes campos en el json de los productos:
+        * ID
+        * producto
+        * descripcion
+        * fotoProducto
+        * Categoría: categoria-videojuegos, categoria-consolas, categoria-coleccionables, categoria-accesorios
+        * marca
+        * condicion
+        * precio
+    * Task #2: Lo hace Fer.
+      * Los se van a usar los siguientes campos en el json de los usuarios:
+        * username
+        * nombre
+        * email
+        * domicilio
+        * Contraseña
+        * fechaNacimiento
+        * foto-perfil
+    * Task #3: CRUD de productos - Lo hacen Pablo & Dante
+
+
+* Domingo 10.21.2021
+  * ¿Que se hizo?
+    * Parcialmente la task 4 en conjunto.
+  * ¿Se encontró algun impedimento?
+    * El punto 4 es la unica tarea remainding.
+
+
+* Domingo 10.31.2021
+  * ¿Que se hizo?
+    * Se acordó que a al formulario de carga de productos se le agregue la valoracion en estrellas y la condicion del producto.
+    * Se realizó la restropectiva del sprint
+  * ¿Que se va a hacer?
+    * Se repartieron tareas:
+      * Task 4: Implementar la entidad de usuarios - Fer
+      * Task 5: Implementar el registro de usuarios - Cris
+      * Task 6: Implementar el login de usuarios - Dante
+      * Task 7: Implementar la función de recordar al usuario - Esteban
+      * Task 8: Implementar rutas de huéspedes y de usuarios - Pablo
+
