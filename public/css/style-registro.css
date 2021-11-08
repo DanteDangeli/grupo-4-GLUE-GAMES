@@ -1,11 +1,21 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --main-color: #333333;
+  --secondary-color: #232323;
+  --type-color: #ffffff;
+  --details-color: #069bff;
 }
 
 
 body {
   font-family: "Poppins";
-  background-color: black;
+  background-color: var(--main-color);
+  color: var(--type-color);
 }
 
 .logo {
@@ -19,41 +29,47 @@ body {
 
 form {
   display: block;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 30%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   margin: auto;
-  background-color: #202020;
-  border-radius: 8px;
-  padding: 30px;
-  color:  rgba(255, 255, 255, 0.72);
+  height: 725px;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
 }
 
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
 .formulario div {
   text-align: center;
-  padding: 10px 0;
-  margin: 10px 10px;
+  padding: 5px 0;
+  margin: 5px 10px;
   font-size: 16px;
   width: 100%;
 }
 
 label {
   font-size: 20px;
+  margin-right: 20px;
 }
 
 .control {
   border-radius: 5px;
   padding: 5px;
-  width: 50%;
+  width: 40%;
 }
-
-
 
 .formulario div button {
   font-size: 20px;
   background-color: #069bff;
   color: white;
-  width: 100%;
+  width: 250px;
   height: 30px;
   border-radius: 5px;
 }
