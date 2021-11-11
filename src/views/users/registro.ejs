@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <form method="POST" action="/registrar-nuevo-usuario" >
+  <form method="POST" action="/users/registro" enctype="multipart/form-data">
    <a href="/"> <img src="/images/logo-gluegames.png" alt="logo" class="logo"> </a>
 
 
@@ -41,13 +41,13 @@
     </div>
     <br>
     <div>
-        <label for="foto">Foto de usuario</label>
-        <input type="file" name="foto-perfil" id="foto">
+        <label for="foto-perfil">Foto de usuario</label>
+        <input type="file" name="foto-perfil" id="foto-perfil">
     </div>
     <br>
     <div>
         <label for="contraseña">Contraseña</label>
-        <input type="password" name="Contraseña" id="contraseña" class="control">
+        <input type="password" name="contraseña" id="contraseña" class="control">
     </div>
     <div>
         <label for="confirmar">Confirmar contraseña</label>
