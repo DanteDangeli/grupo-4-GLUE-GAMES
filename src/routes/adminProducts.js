@@ -21,7 +21,7 @@ const upload = multer({storage: diskStorage});
 router.get('/products/create', adminProductsController.crearProductoForm)
 router.post('/products/create', upload.single('fotoProducto') , adminProductsController.crearProducto);
 router.get('/products/edit/:id', adminProductsController.editarProductoForm);
-router.post('/products/edit/:id', adminProductsController.editar);
-router.post('/products/delete/:id', adminProductsController.deleteProduct);
+router.put('/products/edit/:id', adminProductsController.editar);
+router.delete('/products/delete/:id', adminProductsController.deleteProduct);
 
 module.exports=router;
