@@ -33,10 +33,13 @@ app.use('/users', usersController);
 
 
 // error 404 y pagina de error
-
+app.use((req, res, next) => {
+    res.status(404).render("error404")
+})
 
 // levantando el servidor
 
 app.listen(3000, ()=>{
     console.log('servidor en marcha...')
 })
+
