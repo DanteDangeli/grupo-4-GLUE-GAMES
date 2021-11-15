@@ -66,7 +66,7 @@
         * domicilio
         * Contraseña
         * fechaNacimiento
-        * foto-perfil
+        * fotoPerfil
     * Task #3: CRUD de productos - Lo hacen Pablo & Dante
 
 

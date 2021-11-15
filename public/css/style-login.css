@@ -85,3 +85,7 @@ label {
 a {
   color: var(--type-color);
 }
+
+.text-danger{
+  color:#dc3545!important
+}

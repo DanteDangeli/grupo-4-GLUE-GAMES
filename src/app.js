@@ -2,16 +2,32 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
-
+const session = require('express-session')
+const cookies = require('cookie-parser');
 
 // express()
 const app = express();
 
+// sistema de session
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+// seteo de middlewares
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 // middlewares
+app.use(cookies());
+app.use(userLoggedMiddleware);
+
 app.use(express.static(path.join(__dirname,'../public')));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+
 
 // template engine
 app.set('view engine', 'ejs');
@@ -29,7 +45,7 @@ const usersController = require('./routes/users');
 app.use('/', mainRouter);
 app.use('/products', productsController);
 app.use('/admin', adminProductsController);
-app.use('/users', usersController);
+app.use('/user', usersController);
 
 
 // error 404 y pagina de error

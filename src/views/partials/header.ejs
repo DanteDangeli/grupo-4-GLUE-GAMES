@@ -20,10 +20,20 @@
       </div>
 
     <nav class="header-secondnav">
+        <% if (locals.isLogged) { %>
+            <li>
+                <a href="/user/profile">
+                    <img class= "border-radius: 100%; vertical-align: middle" src="/images/users/<%= locals.userLogged.fotoPerfil %>" width="40" style="border-radius: 100%;">
+                     <%= locals.userLogged.nombre %> 
+                    </a>
+
+            <li><a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a></li>            
+                </li>
+            <% } else { %>
+                <li><a href="/user/login">Iniciar sesión</a></li>
+                <li><a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a></li>
+            <% } %>
         
-            <li><a href="/users/login">Iniciar sesión</a></li>
-            <li><a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a></li>
-    
     </nav>
 
 </header>

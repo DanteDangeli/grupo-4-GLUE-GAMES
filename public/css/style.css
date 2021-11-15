@@ -146,7 +146,7 @@ footer {
 }
 
 .footer-info {
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .footer-info h1 {
@@ -220,6 +220,11 @@ footer {
   .header-secondnav {
     display: flex;
     align-self: center;
+  }
+
+  .header-secondnav img {
+    border-radius: 100%;
+    vertical-align: middle;
   }
 
   img.logo {
