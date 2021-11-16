@@ -67,16 +67,18 @@
             <div class="hero_texts">
                 <h1 class="hero_title"> <%= product.producto %></h1>
              
-                <P class="hero_paragraph">VALORACION CON ESTRELLAS</P>
-                <P class="hero_paragraph">PRECIO $ <%= product.precio %></P>
+                <P class="hero_paragraph">Valoración</P>
+                <P class="hero_paragraph">Precio $ <%= product.precio %></P>
                 <P class="hero_paragraph"><%= product.condicion %></P>
                 <P><a href="#" class="hero_cta">AGREGAR AL CARRITO</a></P>
                 <br>  </br>
-                <a href="/admin/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                <a href="/admin/products/edit/<%= product.id %>" style="color:white ">Editar producto</a>
+                <br>
                 <br>
                 <form action="/admin/products/delete/<%= product.id %>?_method=delete" method="POST" style="display: inline-flex">
                     <button type="submit" class="action-button delete">ELIMINAR</button>
                 </form>
+                <br> </br>
                 <P><a href="#" class="hero_cta2">Políticas de reembolso</a></P>
                 <br>  </br>
                 <P><a href="#" class="hero_cta2">Promociones de envío gratis</a></P>
@@ -107,11 +109,13 @@
         </div> -->
 
         <div class="containerdetalle">
-
+            <br> </br>
             <div class="detalle-info">
                 <h1>Detalle del Producto</h1>
                 <p class="detalle-txt"> <%= product.descripcion %> </p>
             </div>
+            <br> </br>
+            <br> </br>
         </div>
 
 

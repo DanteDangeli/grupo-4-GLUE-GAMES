@@ -48,7 +48,6 @@ form {
 }
 .formulario div {
   text-align: center;
-  padding: 5px 0;
   margin: 5px 10px;
   font-size: 16px;
   width: 100%;
@@ -77,4 +76,11 @@ label {
 
 h1 {
   text-align: center;
+}
+
+
+.text-danger{
+  color:#dc3545!important;
+  padding: 0%;
+  margin: 0%;
 }

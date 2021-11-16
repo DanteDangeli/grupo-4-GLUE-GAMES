@@ -3,6 +3,8 @@ const path = require('path');
 const bcrypt = require("bcryptjs")
 const session = require('express-session')
 const User = require('../models/User');
+const {	validationResult } = require('express-validator');
+
 
 const usersFilepath = path.join(__dirname, '../data/usersDatabase.json');
 const users = JSON.parse(fs.readFileSync(usersFilepath, 'utf-8'));
@@ -14,19 +16,53 @@ const controller = {
       res.render(pathLogin) 
    },
    registro: (req, res)=>{
-      let pathregistro = path.join(__dirname, '../views/users/registro.ejs')
-      res.render(pathregistro)
+      let pathRegistro = path.join(__dirname, '../views/users/registro.ejs')
+      res.render(pathRegistro)
    },
 
    createUser: (req,res) => {
-      let newUser = {
+      let pathRegister = path.join(__dirname, '../views/users/registro.ejs')
+		const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length > 0) {
+			return res.render(pathRegister, {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+
+		let userInDB = User.findByField('email', req.body.email);
+
+		if (userInDB) {
+			return res.render(pathRegister, {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+      }
+
+         let userToCreate = {
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
+            avatar: req.file.filename
+         }
+   
+         let userCreated = User.create(userToCreate);
+   
+         return res.redirect('/user/login');
+
+      
+/*       let newUser = {
          nombre: req.body.nombre,
          apellido: req.body.apellido,
          usuario: req.body.usuario,
          email: req.body.email,
          fechaNacimiento: req.body.fechaNacimiento,
          fotoPerfil: req.file.filename,
-         password: bcrypt.hashSync(req.body.contraseña,10),
+         password: bcrypt.hashSync(req.body.password,10),
       };
       console.log(newUser);
       users.push(newUser);
@@ -34,7 +70,7 @@ const controller = {
       let usersJson = JSON.stringify(users);
       fs.writeFileSync(usersFilepath, usersJson);
       console.log('User cargado al jsonDataBase :)');
-      res.redirect("/")
+      res.redirect("/user/login") */
 
    },
 	loginProcess: (req, res) => {
