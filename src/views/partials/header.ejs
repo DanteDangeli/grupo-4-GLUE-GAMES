@@ -1,39 +1,43 @@
-<header class="main-header">
 
-    <div>
-       <a href="/"><img src="/images/logo-gluegames.png" class="logo" alt="logo GlueGames"></a>
-    </div>
+    <link rel="stylesheet" href="/css/headerStyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap">
+    <script src="https://kit.fontawesome.com/cd8fa35da4.js" crossorigin="anonymous"></script>
 
-    <nav class="header-firstnav">
-    
-            <li><a disabled href="/products">Tienda</a></li>
-            <li><a disabled href="#">Acerca de</a></li>
-            <li><a disabled href="#">Soporte</a></li>
-    
+
+<header>
+    <div class="logo">
+        <a href="/"><img src="/images/logo-gluegames.png" class="logo" alt="logo GlueGames"></a>
+     </div>
+     <div class="search">
+        <i class="fas fa-search"></i>
+     </div>
+     <nav class="nav-mobile">
+     <div class="burguer-menu">
+        <i class="fas fa-bars"></i>
+     </div>
+     <div class="cart">
+        <i class="fas fa-shopping-cart"></i>
+     </div>
     </nav>
-
-    <div class="box">
-        <div class="container-1">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input type="search" id="search" placeholder="Buscar" />
-        </div>
+     <nav class="nav-desktop">
+      <div class="perfil-usuario">
+         <img src="/images/users/1637980580577-user.jpg">
+         <p class="user-name">VISITANTE</p>
+         <i class="fas fa-chevron-down"></i>
       </div>
-
-    <nav class="header-secondnav">
-        <% if (locals.isLogged) { %>
-            <li>
-                <a href="/user/profile">
-                    <img class= "border-radius: 100%; vertical-align: middle" src="/images/users/<%= locals.userLogged.fotoPerfil %>" width="40" style="border-radius: 100%;">
-                     <%= locals.userLogged.nombre %> 
-                    </a>
-
-            <li><a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a></li>            
-                </li>
-            <% } else { %>
-                <li><a href="/user/login">Iniciar sesión</a></li>
-                <li><a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a></li>
-            <% } %>
+      <div class="compras">
+         <p>Mis compras</p>
+         <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="favoritos">
         
-    </nav>
-
+         <i class="far fa-heart"></i>
+      </div>
+      <div class="notificaciones">
+         <i class="far fa-bell"></i>
+      </div>
+      <div class="cart">
+         <i class="fas fa-shopping-cart"></i>
+      </div>
+     </nav>
 </header>

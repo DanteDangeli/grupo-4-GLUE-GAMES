@@ -1,91 +1,119 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --main-color: #333333;
-  --secondary-color: #232323;
-  --type-color: #ffffff;
-  --details-color: #069bff;
-}
-
-body {
-  font-family: "Poppins";
-  background-color: var(--main-color);
-  color: var(--type-color);
-}
-
-form {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  height: 600px;
-  max-width: 600px;
-  border-radius: 10px;
-  background-color: var(--secondary-color);
-}
-
-.logo {
-  display: block;
-  width: 80%;
-  margin: auto;
-  max-width: 200px;
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-
-h1 {
-  text-align: center;
-}
-
-.formulario {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.formulario div {
-  text-align: center;
-  padding: 10px 0;
-  margin: 10px 10px;
-  font-size: 16px;
-  width: 100%;
-}
-
-label {
-  font-size: 20px;
-}
-
-.mantener {
-  font-size: 18px;
-}
-
-.control {
-  border-radius: 5px;
-  width: 100%;
-  padding: 5px;
-}
-
-.formulario div button {
-  display: block;
-  font-size: 20px;
-  background-color: #069bff;
+body{
+  background-color: #202020;
   color: white;
-  width: 150px;
-  height: 30px;
-  margin: auto;
+  font-family: 'poppins';
 }
 
-a {
-  color: var(--type-color);
+form{
+
+  border-radius: 10px;
+  padding: 10px;
+}
+.logo img{
+  width: 100%;
+}
+.logo{
+  width: 60%;
+  margin: 50px auto;
+}
+h1{
+  font-size: 16px;
+  margin-bottom: 20px;
+
+}
+label{
+  font-size: 12px;
+}
+input{
+  font-size: 14px;
+  font-family: 'poppins';
+}
+.nombreCompleto{
+  display: flex;
+  flex-wrap: nowrap
+}
+.userName input{
+  width: 97%;
+  margin-bottom: 5px;
+  
+}
+.email input{
+  width: 97%;
+  margin-bottom: 5px;
+}
+.contraseña{
+  margin-bottom: 20px;
 }
 
-.text-danger{
-  color:#dc3545!important
+.contraseña input{
+  width: 97%;
+}
+.mantener{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.boton button{
+  background-color: #097be6;
+  color: white;
+  font-family: 'poppins';
+  width: 95%;
+  margin: 25px auto;
+  height: 45px;
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+input{
+  border-radius: 5px;
+  height: 35px;
+}
+.ayuda{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 14px;
+
+}
+
+@media(min-width:768px ){
+  form{
+    width: 50%;
+    margin: auto;
+  }
+}
+
+@media(min-width:1024px ){
+  form{
+    
+    width: 30%;
+    background-color: #202020;
+    margin-left: 72%;
+    height: 98vh;
+    
+
+  }
+  .logo{
+    margin: 50px auto;
+  }
+  h1{
+    margin-bottom: 20px;
+  }
+  body{
+    display: flex;
+    background-image: url('../images/pexels-suludan-diliyaer-596750.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: left;
+  }
+
+  
+
+
 }

@@ -38,6 +38,7 @@ const mainRouter = require('./routes/main');
 const productsController = require('./routes/products');
 const adminProductsController = require('./routes/adminProducts');
 const usersController = require('./routes/users');
+const usuariosApi = require('./routes/api/usuarios');
 
 
 
@@ -46,6 +47,7 @@ app.use('/', mainRouter);
 app.use('/products', productsController);
 app.use('/admin', adminProductsController);
 app.use('/user', usersController);
+app.use('/usuariosApi', usuariosApi);
 
 
 // error 404 y pagina de error
@@ -56,6 +58,6 @@ app.use((req, res, next) => {
 // levantando el servidor
 
 app.listen(3000, ()=>{
-    console.log('servidor en marcha...')
+    console.log('servidor en marcha...puerto 3000')
 })
 

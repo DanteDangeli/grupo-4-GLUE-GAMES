@@ -1,0 +1,85 @@
+.ofertas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.producto-lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    width: 45%;
+    height: 25vh;
+    border-radius: 5px;
+    border: solid 1px black;
+    margin:5px;
+    padding: 7px;
+}
+
+.producto-lista a img{
+    width: 60%;
+    margin-left: 22px;
+}
+.caja-datos-producto-lista{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.box-precio-lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.descuento-lista{
+    background-color: rgb(21, 148, 233);
+    border-radius: 5px;
+    padding: 2px;
+    color: whitesmoke; 
+}
+.precio-unitario-lista{
+    text-decoration:line-through;
+}
+
+@media(min-width:768px){
+   .producto-lista{
+       width: 30%;  
+       height: 30vh;
+   } 
+   .producto-lista a img{
+    width: 80%;
+    padding-left: 0;
+   }
+}
+@media(min-width:1024px){
+    .producto-lista{
+        width: 23%;  
+        height: 30vh;
+    } 
+    .producto-lista a img{
+     width: 80%;
+     padding-left: 0;
+    }
+ }
+ @media(min-width:1200px){
+    .producto-lista{
+        width: 23%;  
+        height: 40vh;
+    } 
+    .producto-lista a img{
+     width: 80%;
+     padding-left: 0;
+    }
+ }
+ @media(min-width:1440px){
+    .producto-lista{
+        width: 23%;  
+        height: 45vh;
+    } 
+    .producto-lista a img{
+     width: 80%;
+     padding-left: 0;
+    }
+ }

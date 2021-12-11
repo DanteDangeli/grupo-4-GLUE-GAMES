@@ -1,0 +1,234 @@
+[
+ {
+  "id": 1,
+  "nombre": "Desmund",
+  "apellido": "Farryn",
+  "usuario": "dfarryn0",
+  "email": "dfarryn0@va.gov",
+  "fechaNacimiento": "6/15/1994",
+  "fotoPerfil": "user_1.jpg",
+  "password": "6dYMZr4Ph"
+ },
+ {
+  "id": 2,
+  "nombre": "Rufus",
+  "apellido": "Oldred",
+  "usuario": "roldred1",
+  "email": "roldred1@uiuc.edu",
+  "fechaNacimiento": "6/29/1996",
+  "fotoPerfil": "user_2.jpg",
+  "password": "bNDVQaR0JD"
+ },
+ {
+  "id": 3,
+  "nombre": "Kore",
+  "apellido": "Perrat",
+  "usuario": "kperrat2",
+  "email": "kperrat2@i2i.jp",
+  "fechaNacimiento": "8/13/1997",
+  "fotoPerfil": "user_3.jpg",
+  "password": "dt6BDCv"
+ },
+ {
+  "id": 4,
+  "nombre": "Amberly",
+  "apellido": "Kerfut",
+  "usuario": "akerfut3",
+  "email": "akerfut3@gov.uk",
+  "fechaNacimiento": "5/14/1998",
+  "fotoPerfil": "user_4.jpg",
+  "password": "Gl9yXo"
+ },
+ {
+  "id": 5,
+  "nombre": "Adel",
+  "apellido": "Feaveryear",
+  "usuario": "afeaveryear4",
+  "email": "afeaveryear4@intel.com",
+  "fechaNacimiento": "5/23/1998",
+  "fotoPerfil": "user_5.jpg",
+  "password": "xVB5l1"
+ },
+ {
+  "id": 6,
+  "nombre": "Alana",
+  "apellido": "Blazdell",
+  "usuario": "ablazdell5",
+  "email": "ablazdell5@youtu.be",
+  "fechaNacimiento": "7/18/1990",
+  "fotoPerfil": "user_6.jpg",
+  "password": "hzktVk"
+ },
+ {
+  "id": 7,
+  "nombre": "Iormina",
+  "apellido": "Shalliker",
+  "usuario": "ishalliker6",
+  "email": "ishalliker6@csmonitor.com",
+  "fechaNacimiento": "2/18/1998",
+  "fotoPerfil": "user_7.jpg",
+  "password": "niCrEBh49"
+ },
+ {
+  "id": 8,
+  "nombre": "Ainsley",
+  "apellido": "Rivenzon",
+  "usuario": "arivenzon7",
+  "email": "arivenzon7@nydailynews.com",
+  "fechaNacimiento": "4/8/2002",
+  "fotoPerfil": "user_8.jpg",
+  "password": "JTelmRhHpID"
+ },
+ {
+  "id": 9,
+  "nombre": "Kit",
+  "apellido": "Formby",
+  "usuario": "kformby8",
+  "email": "kformby8@state.tx.us",
+  "fechaNacimiento": "8/14/2000",
+  "fotoPerfil": "user_9.jpg",
+  "password": "zz4pVm2CjB"
+ },
+ {
+  "id": 10,
+  "nombre": "Joela",
+  "apellido": "Borchardt",
+  "usuario": "jborchardt9",
+  "email": "jborchardt9@github.io",
+  "fechaNacimiento": "5/27/2000",
+  "fotoPerfil": "user_10.jpg",
+  "password": "ytRX161Cy"
+ },
+ {
+  "id": 11,
+  "nombre": "Eveline",
+  "apellido": "Litster",
+  "usuario": "elitstera",
+  "email": "elitstera@unc.edu",
+  "fechaNacimiento": "12/19/1994",
+  "fotoPerfil": "user_11.jpg",
+  "password": "H6gt1Q1HRW"
+ },
+ {
+  "id": 12,
+  "nombre": "Garnet",
+  "apellido": "Moscone",
+  "usuario": "gmosconeb",
+  "email": "gmosconeb@amazon.co.uk",
+  "fechaNacimiento": "3/29/2001",
+  "fotoPerfil": "user_12.jpg",
+  "password": "dT6xos3H9"
+ },
+ {
+  "id": 13,
+  "nombre": "Paquito",
+  "apellido": "Goodger",
+  "usuario": "pgoodgerc",
+  "email": "pgoodgerc@rediff.com",
+  "fechaNacimiento": "7/16/1990",
+  "fotoPerfil": "user_13.jpg",
+  "password": "JXAiCPDFH"
+ },
+ {
+  "id": 14,
+  "nombre": "Noll",
+  "apellido": "Thorrold",
+  "usuario": "nthorroldd",
+  "email": "nthorroldd@ftc.gov",
+  "fechaNacimiento": "8/6/1990",
+  "fotoPerfil": "user_14.jpg",
+  "password": "QGMwqvI5H0T"
+ },
+ {
+  "id": 15,
+  "nombre": "Bev",
+  "apellido": "Siggins",
+  "usuario": "bsigginse",
+  "email": "bsigginse@europa.eu",
+  "fechaNacimiento": "8/14/1991",
+  "fotoPerfil": "user_15.jpg",
+  "password": "xpGyFqHfS"
+ },
+ {
+  "id": 16,
+  "nombre": "Nolana",
+  "apellido": "Summerfield",
+  "usuario": "nsummerfieldf",
+  "email": "nsummerfieldf@cocolog-nifty.com",
+  "fechaNacimiento": "5/4/1995",
+  "fotoPerfil": "user_16.jpg",
+  "password": "BxCHwYK"
+ },
+ {
+  "id": 17,
+  "nombre": "Claresta",
+  "apellido": "McAnalley",
+  "usuario": "cmcanalleyg",
+  "email": "cmcanalleyg@example.com",
+  "fechaNacimiento": "2/18/1998",
+  "fotoPerfil": "user_17.jpg",
+  "password": "M7Zjt8d29b"
+ },
+ {
+  "id": 18,
+  "nombre": "Tadeas",
+  "apellido": "Romayne",
+  "usuario": "tromayneh",
+  "email": "tromayneh@forbes.com",
+  "fechaNacimiento": "3/23/2002",
+  "fotoPerfil": "user_18.jpg",
+  "password": "GSVUzOQaRAN"
+ },
+ {
+  "id": 19,
+  "nombre": "Evelyn",
+  "apellido": "Uccello",
+  "usuario": "euccelloi",
+  "email": "euccelloi@soup.io",
+  "fechaNacimiento": "3/15/1999",
+  "fotoPerfil": "user_19.jpg",
+  "password": "BQmHUv"
+ },
+ {
+  "id": 20,
+  "nombre": "Nadean",
+  "apellido": "Laurance",
+  "usuario": "nlaurancej",
+  "email": "nlaurancej@csmonitor.com",
+  "fechaNacimiento": "10/5/1994",
+  "fotoPerfil": "user_20.jpg",
+  "password": "hPpg1TcsBh"
+ },
+ {
+  "id": 21,
+  "nombre": "Maria Fernanda",
+  "apellido": "Farias",
+  "usuario": "Ferfita",
+  "email": "fernanda.farias.u.u@gmail.com",
+  "fechaNacimiento": "1995-12-18",
+  "fotoPerfil": "1636820922151-user.png",
+  "password": "$2a$10$iVvq9muAPpB8DN2sZNtuv.ct2JIwuYS6jH0ipWYmPWM8FaSeJgjvm"
+ },
+ {
+  "id": 1,
+  "nombre": "test",
+  "apellido": "test",
+  "usuario": "test",
+  "email": "test@gmail.com",
+  "fechaNacimiento": "2021-11-15",
+  "password": "$2a$10$bZf4ZEe6/qAvmCtBNmBDjOGICfaK2Ub7x4NZ2r/F4IOZ/1cwK6hUu",
+  "confirmar": "test",
+  "avatar": "1637028578799-user.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Pablo",
+  "apellido": "custodio",
+  "usuario": "rompetangas5000",
+  "email": "pablo.producer21@gmail.com",
+  "fechaNacimiento": "2021-11-21",
+  "password": "$2a$10$p1pRP9Ns2yJ1HaT3ruSxge8XRaU3S41FalIIu50OKvUrsFeShm/9G",
+  "confirmar": "123456",
+  "avatar": "1637980580577-user.jpg"
+ }
+]

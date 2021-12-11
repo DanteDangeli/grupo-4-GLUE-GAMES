@@ -4,233 +4,206 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
-:root {
-  --main-color: #333333;
-  --secondary-color: #232323;
-  --type-color: #ffffff;
-  --details-color: #069bff;
+body{
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
 }
 
-main {
-  padding: 20px 0 0 0;
-}
-
-.carrousel {
-  display: none;
-}
-
-.carrousel article img {
-  display: block;
-  max-width: 100%;
-  margin: auto;
-}
-
-.carrousel article label {
-  background-color: #00000062;
-  display: none;
-  position: relative;
-  padding: 0 20px 0 20px;
-  text-align: left;
-  bottom: 175px;
-  left: 7%;
-  max-width: 20%;
-}
-
-.container-los-mas-vendidos {
-  padding-bottom: 60px;
-}
-
-.productos-en-venta {
-  padding: 20px;
-}
-
-.productos-en-venta p {
-  position: relative;
-  background-color: #00000060;
-  bottom: 25px;
-  left: 32px;
-  border-end-end-radius: 7px;
-  border-end-start-radius: 7px;
-  width: 80%;
-}
-
-.productos-en-venta div a {
-  text-decoration: none;
-  text-align: center;
-  color: var(--type-color);
-}
-
-.productos-en-venta img {
-  display: block;
-  margin: auto;
-  width: 80%;
-  border-radius: 10px;
-}
-
-.container-masvendidos {
-  padding: 20px;
-  display: block;
+.carrusel img{
   width: 100%;
-  background-color: var(--secondary-color);
 }
-
-.container-vendidos-texto {
-  text-align: center;
-  font-size: 34px;
-}
-
-.container-masvendidos div {
-  padding: 20px;
-}
-
-.container-masvendidos img {
-  display: block;
-  border-radius: 10px;
+.carrusel{
+  width: 95%;
   margin: auto;
-  width: 80%;
+  padding-top: 5px;
 }
-
-.container-vendidos-texto h1 span {
-  color: var(--details-color);
+.categorias{
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
-.titulo-ofertas {
+.categoria{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.categoria img{
+  width: 70px;
+  border-radius: 35px;
+  box-shadow: inset;
+}
+.categoria p{
+  color: white;
+  font-size: 11px;
+  padding-left: 3px;
   text-align: center;
-  font-size: 34px;
 }
-
-.ofertas div img {
-  padding: 20px 0;
+.ofertas-title{
+  color: white;
+  padding-left: 15px;
 }
-
-.ofertas img {
-  display: block;
+.ofertas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.producto-oferta{
+  background-color: aliceblue;
+  width: 45%;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  color: #303335;
+  border-radius:5px;
+  margin-top: 10px;
+}
+#producto-oferta-desk{
+  display: none;
+}
+.producto-oferta img{
+  width: 60%;
   margin: auto;
-  width: 80%;
+}
+.caja-datos-producto{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.nombre-producto{
+  padding-left: 6px;
+}
+.categoria-marca{
+  padding-left: 6px;
+}
+.box-precio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 3px;
+  align-items: center;
+}
+.descuento{
+  background-color:#097be6 ;
+  border-radius: 3px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.precio-unitario{
+  text-decoration:line-through;
+  font-style: italic;
+}
+.novedades-title{
+  color: white;
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.novedades{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 95%;
+  margin: auto;
   border-radius: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.producto-novedad{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+.producto-novedad img{
+  width: 120px;
+  padding-left: 30px;
+}
+#caja-datos-producto-novedad{
+  padding-right: 50px;
+}
+.ver-mas-novedades{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  color: black;
+  align-items: center;
+}
+.ver-mas-novedades h4{
+  padding-left: 20px;
+}
+.ver-mas-novedades i{
+  color: black;
+  padding-right: 20px;
+}
+footer{
+  color: white;
+  background-color: #303335;
+  padding: 15px;
+}
+#logo-footer{
+  margin-top: 15px;
 }
 
-@media (min-width: 1200px) {
-  main {
-    padding: 60px 0 0 0;
-  }
 
-  .carrousel {
-    display: block;
+@media(min-width:1024px){
+  .carrusel img{
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
   }
-
-  .carrousel article label {
-    display: block;
+  .categorias{
+    margin: 50px 0px;
   }
-
-  .carrousel article img {
-    max-width: 90%;
+  
+  .categoria img{
+    width: 200px;
+    height: 100px;
     border-radius: 10px;
-    transition: box-shadow 450ms;
+    object-fit: cover;
   }
-
-  .carrousel article img:hover {
-    box-shadow: 0px 0px 20px rgb(100, 100, 100);
+  .categoria p{
+    font-size: 22px;
   }
-
-  .productos-en-venta img {
-    width: 64%;
-    transition: box-shadow 450ms, width 450ms;
+  .producto-oferta{
+    height: 45vh;
   }
-
-  .productos-en-venta img:hover {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    width: 68%;
+  #producto-oferta-desk{
+    display:flex;
   }
-
-  .productos-en-venta {
-    display: flex;
-    padding: 20px 0 70px 0;
-  }
-
-  .productos-en-venta p {
-    bottom: 25px;
-    left: 85px;
-    width: 64%;
-  }
-  .container-consolas p {
-    left: 86px;
-  }
-
-  .container-masvendidos {
-    width: 80%;
-    margin: auto;
-  }
-
-  .container-imagenes-masvendido {
-    display: flex;
-  }
-
-  .container-masvendidos img {
-    width: 60%;
-    transition: box-shadow 1s, width 450ms;
-  }
-
-  .container-masvendidos img:hover {
-    width: 70%;
-    box-shadow: 0px 0px 30px rgb(100, 100, 100);
-  }
-
-  .mas-vendido3 {
-    width: 95%;
-  }
-
-  .container-vendidos-texto h1 {
-    background-color: var(--main-color);
-    max-width: 800px;
-    margin: auto;
-  }
-
-  .ofertas {
-    display: flex;
-  }
-
-  .ofertas img {
-    display: flex;
+  .producto-oferta img{
     width: 50%;
-    transition: width 450ms, box-shadow 450ms;
   }
-
-  .oferta-principal {
-    display: flex;
-    width: 70%;
-    padding: 0 0 20px 0;
+  .ofertas{
+    margin-bottom: 100px;
   }
-
-  .ofertas div img {
-    padding: 0;
+  .caja-datos-producto h3, p, div{
+    font-size: 14px;
   }
-
-  div.otras-ofertas {
-    display: flex;
-    flex-wrap: wrap;
-    width: 65%;
+  .producto-novedad{
+    align-items: center;
+    border-bottom: solid 1px black;
+    margin-top: 10px;
   }
-
-  .ofertab {
-    padding: 20px 0 0 0;
+  .producto-novedad img{
+    width: 25%;
   }
-
-  .ofertaa,
-  .ofertab {
-    display: flex;
-    position: relative;
-    right: 150px;
+  #caja-datos-producto-novedad{
+    margin-right: 200px;
   }
-
-  .titulo-ofertas {
-    text-align: center;
-    font-size: 50px;
+  
+}
+@media(min-width:1200px){
+  .categoria img{
+    width: 250px;
+    height: 120px;
+    
   }
-
-  .ofertas img:hover {
-    width: 60%;
-    box-shadow: 0px 0px 30px rgb(100, 100, 100);
+  .producto-oferta{
+    width: 45%;
+    height: 500px;
   }
 }
