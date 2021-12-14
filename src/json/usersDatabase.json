@@ -230,5 +230,16 @@
   "password": "$2a$10$p1pRP9Ns2yJ1HaT3ruSxge8XRaU3S41FalIIu50OKvUrsFeShm/9G",
   "confirmar": "123456",
   "avatar": "1637980580577-user.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "PRUEBA",
+  "apellido": "perez",
+  "usuario": "prueba",
+  "email": "custodiomediosdye@gmail.com",
+  "fechaNacimiento": "2021-12-13",
+  "password": "$2a$10$sAgCEq/dmDtuT3kZlG6FYeSUrICnNrcIE50KRUbBqp4Y9gyzMGxPy",
+  "confirmar": "123456",
+  "avatar": "1639439502307-user.jpg"
  }
 ]

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../../database/models');
 
 const productsFilePath = path.join(__dirname, '../json/productsDatabase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -9,7 +10,7 @@ const controller = {
         let pathForm = path.join(__dirname, '../views/adminProducts/crearProducto.ejs');
         res.render(pathForm);
     },
-    crearProducto: (req, res) => {
+    /*crearProducto: (req, res) => {
         let newProduct = {
             producto:req.body.producto,
             id:req.body.id,
@@ -28,7 +29,15 @@ const controller = {
     fs.writeFileSync(productsFilePath, productsJson);
     console.log('producto cargado al jsonDataBase :)');
     res.redirect('/')
-    },
+    }*/
+    crearProducto: (req, res)=>{
+        console.log(req.body)
+        db.Productos.create(req.body)
+        .then(producto =>{
+            res.send(producto)
+        })
+    }
+    ,
     editarProductoForm: (req, res)=>{
         let pathForm =path.join(__dirname, '../views/adminProducts/editarProducto.ejs');
         let productId = req.params.id;
@@ -36,7 +45,9 @@ const controller = {
         res.render(pathForm, {product});
     },
     editar: (req, res)=>{
-      let productId = req.params.id;
+      
+
+      /*let productId = req.params.id;
       let producAEdit = products.find(product => product.id == productId);
       console.log(producAEdit);
       let productEdit= {
@@ -52,10 +63,24 @@ const controller = {
       let productsEditJSON = JSON.stringify(products);
       fs.writeFileSync(productsFilePath, productsEditJSON);
       console.log('producto editado :) cuchau!');
-      res.redirect('/')
+      res.redirect('/')*/
     },
     deleteProduct: (req, res)=>{
         let productId= req.params.id;
+        db.Productos.destroy({
+            where:{
+                id:productId
+            }
+        })
+        .then(producto => {
+            res.send('acabas de eliminar el producto' + producto)
+        })
+       
+       
+       
+       
+       
+        /*let productId= req.params.id;
         let productAELIM= products.find(product=>product.id == productId);
         console.log(productAELIM);
         let indiceProduct= products.indexOf(productAELIM);
@@ -64,7 +89,7 @@ const controller = {
         let productsJSON = JSON.stringify(products);
         fs.writeFileSync(productsFilePath, productsJSON);
         console.log('producto eliminado :(');
-        res.redirect('/')
+        res.redirect('/')*/
     }
 
 };
