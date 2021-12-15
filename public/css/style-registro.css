@@ -74,6 +74,13 @@ input{
   text-decoration: none;
   
 }
+
+.text-danger{
+  color:#dc3545!important;
+  padding: 0%;
+  margin: 0%;
+} 
+
 input{
   border-radius: 5px;
   height: 35px;
@@ -107,6 +114,7 @@ input{
     background-attachment: fixed;
     background-position: left;
   }
+
 
   
 

@@ -76,6 +76,12 @@
       border-radius: 30px;
       margin-right: 5px;
     }
+    .nav-desktop a{
+      font-size: 14px;
+      color: white;
+      margin-right: 5px;
+      text-decoration: none;
+    }
     .nav-desktop p{
       font-size: 14px;
       color: white;

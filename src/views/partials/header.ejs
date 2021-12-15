@@ -21,12 +21,20 @@
     </nav>
      <nav class="nav-desktop">
       <div class="perfil-usuario">
+         <% if (locals.isLogged) { %>
+                <a href="/user/profile">
+                    <img src="/images/users/<%= locals.userLogged.fotoPerfil %>">
+                    <a href="/user/profile"><%= locals.userLogged.nombre %> </a>
+                    <i class="fas fa-chevron-down"></i>
+                    </a>
+            <% } else { %>
          <img src="/images/users/1637980580577-user.jpg">
-         <p class="user-name">VISITANTE</p>
+         <a href="/user/profile">Visitante</a>
          <i class="fas fa-chevron-down"></i>
+         <% } %>
       </div>
       <div class="compras">
-         <p>Mis compras</p>
+         <p >Mis compras</p>
          <i class="fas fa-chevron-down"></i>
       </div>
       <div class="favoritos">
