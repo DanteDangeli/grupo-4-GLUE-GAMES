@@ -113,7 +113,11 @@ input{
     background-position: left;
   }
 
-  
+  .text-danger{
+    color:#dc3545!important;
+    padding: 0%;
+    margin: 0%;
+  } 
 
 
 }
