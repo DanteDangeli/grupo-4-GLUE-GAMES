@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap">
-    <script src="https://kit.fontawesome.com/cd8fa35da4.js" crossorigin="anonymous"></script>
+    <script src="/js/validator.js"></script>
     <link rel="stylesheet" href="/css/style-registro.css">
     <title>registro</title>
 </head>
 <body>
 
   <form method="POST" action="/admin/products/create" enctype="multipart/form-data" >
-   <a href="/"> <img src="/images/logo-gluegames.png" alt="logo" class="logo"> </a>
+    <figure class="logo">
+        <a href="/"> <img src="/images/logo-gluegames.png" alt="logo" > </a>
+    </figure>
 
 
    <div class="formulario">
@@ -20,22 +22,31 @@
         <h2>Nuevo producto</h2>
     </div>
     <div>
-        <label for="nombre">nombre</label>
-        <input type="text" name="nombre" id="nombre">
+        <div class="email">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+<br>
 
-        <label for="precio">precio</label>
-        <input type="text" name="precio" id="precio">
+        <div class="email">
+            <label for="precio">Precio</label>
+            <input type="text" name="precio" id="precio">
+        </div>
+<br>        
         
-        <label for="descripcion">descipcion</label>
-        <input type="text" name="descripcion" id="descripcion">
+        <div class="email">
+            <label for="descripcion">Descripción</label>
+            <input type="text" name="descripcion" id="descripcion">
+        </div>
+<br>        
+
 
     </div>
    
-    <div class="botones">
+    <div class="boton">
+        <button type="reset">Limpiar</button>
+        <button type="submit">Crear</button>
 
-       <button type="submit">Crear nuevo producto</button>
-
-        <button type="reset">Borrar</button>
     </div>
 </div>
 </form>
