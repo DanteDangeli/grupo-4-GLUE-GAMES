@@ -23,9 +23,6 @@ window.addEventListener("load", function(){
             e.preventDefault();
 
             let ulErrores = document.querySelector('div.erroresCrearProducto ul');
-            // errores.forEach(error => {
-            //     ulErrores.innerHTML  += '<li>' + ${error} + '</li>'
-            // });
 
             for (let i = 0; i < errores.length; i++){
                 ulErrores.innerHTML  += '<li>' + errores[i] + '</li>'
