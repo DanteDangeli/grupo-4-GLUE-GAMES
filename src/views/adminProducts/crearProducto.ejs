@@ -11,7 +11,8 @@
 </head>
 <body>
 
-  <form method="POST" action="/admin/products/create" enctype="multipart/form-data" >
+</div>
+  <form method="POST" class="crearProducto" action="/admin/products/create" enctype="multipart/form-data" >
     <figure class="logo">
         <a href="/"> <img src="/images/logo-gluegames.png" alt="logo" > </a>
     </figure>
@@ -21,6 +22,8 @@
     <div>
         <h2>Nuevo producto</h2>
     </div>
+    <div class="erroresCrearProducto">
+        <ul class="text-danger-v2"></ul> </div>
     <div>
         <div class="email">
             <label for="nombre">Nombre</label>
@@ -39,14 +42,16 @@
             <input type="text" name="descripcion" id="descripcion">
         </div>
 <br>        
-
+<div class="foto">
+    <label for="fotoPerfil">Foto de usuario</label>
+    <input type="file" name="fotoPerfil" id="fotoPerfil  <%= locals.errors && errors.fotoPerfil ? 'is-invalid' : null %> ">
+</div>
 
     </div>
    
     <div class="boton">
-        <button type="reset">Limpiar</button>
         <button type="submit">Crear</button>
-
+        <button type="reset">Limpiar</button>
     </div>
 </div>
 </form>
