@@ -70,6 +70,7 @@ a:link, a:visited, a:active {
       display: flex;
       width: 40%;
       justify-content: space-around;
+      align-items: center;
       font-size: 14px;
     }
     .menu__item__top{
