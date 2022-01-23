@@ -2,61 +2,68 @@
 <html lang="es">
 
     <%-include('../partials/head')%>
-    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/productsDetail.css">
 <body>
-   
     <%-include('../partials/header')%>
    
+<div class="product__detail__container">
+    <div class="image__product">
+        <img src="<%= product.image %>>">
+    </div>
+    <div class="box__details">
+       <div class="container__name"> 
+        <h2 class="nombre__producto"><%= product.nombre %></h2>
+        <i class="far fa-heart"></i>
+       </div>
    
-      <br>  </br>
-      <br>  </br>
-      <br>  </br>
-       
-        <div class="hero">
-            <figure class="hero_picture">
-                <img src="<%= product.image %>>"
-                class="hero_img">
-            </figure>
-
-            <div class="hero_texts">
-                <h1 class="hero_title"> <%= product.nombre %></h1>
-             
-                <P class="hero_paragraph">Valoración</P>
-                <P class="hero_paragraph">Precio <%= product.precio %></P>
-                <P class="hero_paragraph">default</P>
-                <P><a href="#" class="hero_cta">AGREGAR AL CARRITO</a></P>
-                <br>  </br>
-                <% if (locals.isLogged) { %>
-                    <a href="/admin/products/edit/<%= product.id %>" style="color:white ">Editar producto</a>
-                    <br>
-                    <br>
-                    <form action="/admin/products/delete/<%= product.id %>?_method=delete" method="POST" style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
-                    </form>
-                    <% } else { %>
-                    <% } %>
-                <a href="/" style="color:white ">Editar producto</a>
-                <br>
-                <br>
-                <br> </br>
-                <P><a href="#" class="hero_cta2">Políticas de reembolso</a></P>
-                <br>  </br>
-                <P><a href="#" class="hero_cta2">Promociones de envío gratis</a></P>
-            </div>
+    <h2 class="precioNeto"> 
+        <%=product.precio %> 
+    </h2>
+   
+    <div class="detalles__logisticos">
+        TIPO DE ENVIO POR DEFINIR
+    </div>
+    <div class="box__stock">
+        <h3 class="title__stock">Stock disponible</h3>
+        <div class="cantidad__comprar">
+            <p>Cantidad </p>
+            <p>1 unidad</p>
         </div>
-
-        <div class="containerdetalle">
-            <br> </br>
-            <div class="detalle-info">
-                <h1>Detalle del Producto</h1>
-                <p class="detalle-txt"> <%= product.descripcion %> </p>
-            </div>
-            <br> </br>
-            <br> </br>
+        <div class="disponibles">
+            (desconocido cantidad disponibles)
         </div>
+    </div>
+    <div class="botones">
+        <div class="comprar__ahora">
+            <input type="button" class="boton__comprar" value="Comprar ahora">
+        </div>
+        <div class="agregar__al__carrito">
+            <input type="button" class="boton__agregar__carrito" value="Agregar al carrito">
+        </div>
+    </div>
+    <div class="botones__de__administrador ">
+        <% if (locals.isLogged) { %>
+
+            <a href="/admin/products/edit/<%= product.id %>">
+            <input type="button" value="EDITAR PRODUCTO">
+            </a>
+            
+            <form action="/admin/products/delete/<%= product.id %>?_method=delete" method="POST" name="eliminar">
+                <input type="submit" value="ELIMINAR PRODUCTO">
+            </form>
+            <% } else { %>
+            <% } %>
+    </div>
+    </div>
+</div>
+<div class="descripcion">
+    <h2>Descricpción</h2>
+<p>
+    <%= product.descripcion %> 
+</p>
+</div>
 
 
-    </main>
     <%-include('../partials/footer')%>
 
 </body>
