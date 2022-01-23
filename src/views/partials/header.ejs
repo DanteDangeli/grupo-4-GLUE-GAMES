@@ -32,33 +32,66 @@
    
      
      <nav class="nav-desktop">
+   
       <div class="perfil-usuario">
          <% if (locals.isLogged) { %>
                 <a href="/user/profile">
                     <img src="/images/users/<%= locals.userLogged.fotoPerfil %>">
                     <a href="/user/profile"><%= locals.userLogged.nombre %> </a>
-                    <i class="fas fa-chevron-down"></i>
                     </a>
             <% } else { %>
          <img src="/images/users/1637980580577-user.jpg">
-         <a href="/user/profile">Visitante</a>
-         <i class="fas fa-chevron-down"></i>
+         <a href="/user/profile">Iniciar Sesión</a>
          <% } %>
       </div>
-      <div class="compras">
-         <p >Mis compras</p>
-         <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="favoritos">
-        
+
+      
+
+    <ul class="menu__links menu__links__top">
+
+      <li class="menu__item">
+         <a href="#">
+            Mis compras
+         <i class="fas fa-chevron-down menu__arrow"></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Por el momento no tienes compras</a>
+            </li>
+           
+         </ul>
+      </li>
+
+       <li class="menu__item">
+         <a href="#">
          <i class="far fa-heart"></i>
-      </div>
-      <div class="notificaciones">
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Por el momento no tienes favoritos</a>
+            </li>
+           
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
          <i class="far fa-bell"></i>
-      </div>
-      <div class="cart">
-         <i class="fas fa-shopping-cart"></i>
-      </div>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Por el momento no tienes notificaciones</a>
+            </li>
+           
+         </ul>
+      </li>
+
+      
+   </ul>
+
+   <div class="cart">
+      <i class="fas fa-shopping-cart"></i>
+   </div>
 
      </nav>
 </header>
@@ -71,6 +104,7 @@
          <p class="cp">CP 00000</p>
       </section>
    </div>
+
    <ul class="menu__links">
       <li class="menu__item menu__item--show" >
          <a href="#">
@@ -109,25 +143,13 @@
       </a>
          <ul class="menu__nesting">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+               <a href="#" class="menu__link menu_link--inside">equipo</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+               <a href="#" class="menu__link menu_link--inside">historia</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">playstation</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">xbox</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">nintendo</a>
+               <a href="#" class="menu__link menu_link--inside">nuestro sueño</a>
             </li>
          </ul>
       </li>
@@ -139,25 +161,16 @@
       </a>
          <ul class="menu__nesting">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+               <a href="#" class="menu__link menu_link--inside">acerca de la aplicación</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+               <a href="#" class="menu__link menu_link--inside">cambios</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
+               <a href="#" class="menu__link menu_link--inside">garantias</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">playstation</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">xbox</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">nintendo</a>
+               <a href="#" class="menu__link menu_link--inside">formas de pago</a>
             </li>
          </ul>
       </li>
@@ -169,25 +182,13 @@
       </a>
          <ul class="menu__nesting">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+               <a href="#" class="menu__link menu_link--inside">gamers profesionales</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+               <a href="#" class="menu__link menu_link--inside">aficionados</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">playstation</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">xbox</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">nintendo</a>
+               <a href="#" class="menu__link menu_link--inside">todos</a>
             </li>
          </ul>
       </li>
@@ -199,27 +200,18 @@
       </a>
          <ul class="menu__nesting">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+               <a href="#" class="menu__link menu_link--inside">posts recientes</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+               <a href="#" class="menu__link menu_link--inside">hacks gaming</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
+               <a href="#" class="menu__link menu_link--inside">recomendaciones de equipos</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
+               <a href="#" class="menu__link menu_link--inside">monetiza tu talento</a>
             </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">playstation</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">xbox</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">nintendo</a>
-            </li>
-         </ul>
+             </ul>
       </li>
 
      

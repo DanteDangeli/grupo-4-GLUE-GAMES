@@ -25,7 +25,7 @@ a:link, a:visited, a:active {
     width: 100%;
   }
   .logo{
-    width: 40%;
+    width: 30%;
   }
   .search1{
     background-color: white;
@@ -62,54 +62,40 @@ a:link, a:visited, a:active {
   
 
   @media(min-width: 1024px){
+    header{
+      display: flex;
+
+    }
     .logo{
       width: 20%;
     }
     .search{
-      width: 35%;
+      width: 20%;
     }
     .nav-mobile{
       display: none;
     }
     .nav-desktop{
-      width: 35%;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
     }
-    .nav-desktop div{
+    .perfil-usuario{
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
       align-items: center;
-
     }
     .perfil-usuario img{
       width: 30px;
       border-radius: 30px;
       margin-right: 5px;
     }
-    .nav-desktop a{
-      font-size: 14px;
-      color: white;
-      margin-right: 5px;
-      text-decoration: none;
-    }
-    .nav-desktop p{
-      font-size: 14px;
-      color: white;
-      margin-right: 5px;
-    }
-    .nav-desktop i{
-      color: white;
+    .menu__links__top{
+      width: 15%;
+      padding: 0;
+      font-size: 24px;
     }
     .cart{
+      font-size: 14px;
       margin-right: 10px;
-      font-size: 20px;
-    }
-    .favoritos, .notificaciones{
-      font-size: 20px;
     }
 
     .direccion-user{
