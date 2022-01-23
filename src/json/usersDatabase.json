@@ -241,5 +241,16 @@
   "password": "$2a$10$sAgCEq/dmDtuT3kZlG6FYeSUrICnNrcIE50KRUbBqp4Y9gyzMGxPy",
   "confirmar": "123456",
   "avatar": "1639439502307-user.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Violeta mayte",
+  "apellido": "Farias",
+  "usuario": "viole",
+  "email": "viole@gmail.com",
+  "fechaNacimiento": "2000-10-01",
+  "password": "$2a$10$D/P4M6Uj.d1k3LjXHD7NEeXdOziHKyvVU3F53nCFKX.OrG1jMcG1q",
+  "confirmar": "mashumishu",
+  "avatar": "1642632243225-user.png"
  }
 ]

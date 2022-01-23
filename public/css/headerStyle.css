@@ -50,6 +50,7 @@
   .nav-desktop{
     display: none;
   }
+  
 
   @media(min-width: 1024px){
     .logo{
@@ -101,5 +102,87 @@
     .favoritos, .notificaciones{
       font-size: 20px;
     }
-    
+    .nav-bottom{
+      background-color: #303335;
+      color: white; 
+      display: flex;
+      align-items: center;
+    }
+    .nav-bottom ul{
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      padding-bottom:  5px;
+      width: 50%;
+    }
+    .direccion-user{
+      display: flex;
+      width: 10%;
+      margin-left: 15px;
+      align-items: center;
+    }
+    .direccion-user{
+      font-size: 30px;
+    }
+    .direccion-user section{
+      margin-left: 3px;
+    }
+    .cp{
+      font-weight: bold;
+    }
+    .menu-navs{
+      color: white;
+      display: flex;
+      position: absolute;
+      
+    }
+    .menu-navs ul{
+      background-color: #303335;
+      border-radius: 5px;
+      list-style: none;
+      padding: 10px;
+      border: solid 1px white;
+    }
+    .categoriasNav{
+      position: relative;
+      left: 180px;
+    }
+    .nosotrosNav{
+      position: relative;
+      left: 155px;
+    }
+    .ayudaNav{
+      position: relative;
+      left: 155px;
+    }
+    .comunidadNav{
+      position: relative;
+      left: 145px;
+    }
+    .blogNav{
+      position: relative;
+      left: 160px;
+    }
+    .miCuentaNav{
+      position: relative;
+      left: 160px;
+      bottom: 55px;
+    }
+    .comprasNav{
+      position: relative;
+      left: 110px;
+      bottom: 55px;
+    }
+    .favoritosNav{
+      position: relative;
+      left: 80px;
+      bottom: 55px;
+    }
+    .notificacionesNav{
+      position: relative;
+      right: 15px;
+      bottom: 55px;
+    }
+
+
   }

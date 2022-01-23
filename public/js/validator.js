@@ -1,23 +1,36 @@
-// window.addEventListener("load", function(){
-//     let formulario = document.querySelector("form.register");
-//     formulario.addEventListener("submit", function(e){
-//         let errores = [];
-//         let nombre = document.querySelectorAll("div.nombreCompleto div.nombre input#nombre.nombre");
-//         if (nombre.value.length == 2) {
-//             console.log("errores");
-//             errores.push("El nombre debe tener mas de dos caracteres.");
-//         };
-//         if (errores.length > 0) {
-//             e.preventDefault();
+window.addEventListener("load", function(){
 
-//             let ulErrores = document.querySelector('div.text-danger.errores ul');
-//             for (let i = 0; i < errores.length; i++){
-//                 ulErrores.innerHTML  =+ '<li>' + errores[i] + '</li>'
-//             }
-//         }
+    let formulario = document.querySelector("form.crearProducto");
+
+    formulario.addEventListener("submit", function(e) {
+        let errores = [];
+
+        let nombre = document.querySelector("div.formulario div div.email input#nombre");
+        let nombreLength = document.querySelector("div.formulario div div.email input#nombre").value.length;
+        if (nombre.value == "") {
+            errores.push("El nombre del producto debe estar completo.");
+        } else if (nombreLength <= 5) {
+            errores.push("El nombre del producto debe tener más de 5 caracteres.")
+        };
+
+        let descripcion = document.querySelector("div.formulario div div.email input#descripcion").value.length;
+        if (descripcion <= 20) {
+            errores.push("La descripcion del producto tener más de 20 caracteres.");
+        };
 
 
-//     })
-// })
+        if (errores.length > 0) {
+            e.preventDefault();
+
+            let ulErrores = document.querySelector('div.erroresCrearProducto ul');
+
+            for (let i = 0; i < errores.length; i++){
+                ulErrores.innerHTML  += '<li>' + errores[i] + '</li>'
+            }
+        }
+
+
+    })
+})
 
 

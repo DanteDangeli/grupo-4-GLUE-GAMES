@@ -81,6 +81,11 @@ input{
   margin: 0%;
 } 
 
+.text-danger-v2{
+  color:#dc3545!important;
+  margin: 0%;
+} 
+
 input{
   border-radius: 5px;
   height: 35px;
