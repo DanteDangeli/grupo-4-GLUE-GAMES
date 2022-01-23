@@ -9,52 +9,41 @@
         <a href="/"><img src="/images/logo-gluegames.png" class="logo" alt="logo GlueGames"></a>
      </div>
 
-     <form method="post" action="/search">
+<form method="post" action="/search" class="search">
       <input class="search1" type="text" placeholder="buscar un producto" name="buscado">
-      
       <input class="searchButton" type="submit" value="buscar">
-
+</form>
       
-  </form>
+ <ul class="menu__links menu__links__top nav-top">
 
-     <nav class="nav-mobile">
-
-      <div class="cart">
-         <i class="fas fa-shopping-cart"></i>
-      </div>
-
-      <div class="burguer-menu">
-         <i class="fas fa-bars menu__img"></i>
-      </div>
-     </nav>
-        
-        
-   
-     
-     <nav class="nav-desktop">
-   
-      <div class="perfil-usuario">
+      <li class="menu__item__top perfil-usuario">
          <% if (locals.isLogged) { %>
-                <a href="/user/profile">
-                    <img src="/images/users/<%= locals.userLogged.fotoPerfil %>">
-                    <a href="/user/profile"><%= locals.userLogged.nombre %> </a>
-                    </a>
-            <% } else { %>
-         <img src="/images/users/1637980580577-user.jpg">
-         <a href="/user/profile">Iniciar Sesión</a>
-         <% } %>
-      </div>
+            <a href="/user/profile">
+                <img src="/images/users/<%= locals.userLogged.fotoPerfil %>">
+                <a href="/user/profile"><%= locals.userLogged.nombre %> </a>
+                </a>
+        <% } else { %>
+     <img src="/images/users/1637980580577-user.jpg">
+     <a href="/user/profile">Iniciar Sesión</a>
+     <% } %>
+         <ul class="menu__nesting__top">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">mi cuenta</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">cerrar sesión</a>
+            </li>
+           
+         </ul>
+      </li>
 
-      
 
-    <ul class="menu__links menu__links__top">
-
-      <li class="menu__item">
+      <li class="menu__item__top">
          <a href="#">
             Mis compras
          <i class="fas fa-chevron-down menu__arrow"></i>
       </a>
-         <ul class="menu__nesting">
+         <ul class="menu__nesting__top">
             <li class="menu__inside">
                <a href="#" class="menu__link menu_link--inside">Por el momento no tienes compras</a>
             </li>
@@ -62,11 +51,11 @@
          </ul>
       </li>
 
-       <li class="menu__item">
+       <li class="menu__item__top">
          <a href="#">
          <i class="far fa-heart"></i>
       </a>
-         <ul class="menu__nesting">
+         <ul class="menu__nesting__top">
             <li class="menu__inside">
                <a href="#" class="menu__link menu_link--inside">Por el momento no tienes favoritos</a>
             </li>
@@ -74,26 +63,29 @@
          </ul>
       </li>
 
-      <li class="menu__item">
+      <li class="menu__item__top">
          <a href="#">
          <i class="far fa-bell"></i>
       </a>
-         <ul class="menu__nesting">
+         <ul class="menu__nesting__top">
             <li class="menu__inside">
                <a href="#" class="menu__link menu_link--inside">Por el momento no tienes notificaciones</a>
             </li>
            
          </ul>
+         <li class="menu__item__top carrito">
+            <a href="#">
+               <i class="fas fa-shopping-cart"></i>
+         </a>
+            <ul class="menu__nesting__top">
+               <li class="menu__inside">
+                  <a href="#" class="menu__link menu_link--inside">carrito vacio</a>
+               </li>
+              
+            </ul>
       </li>
-
-      
    </ul>
 
-   <div class="cart">
-      <i class="fas fa-shopping-cart"></i>
-   </div>
-
-     </nav>
 </header>
 
 <nav class="nav-bottom">
@@ -105,7 +97,7 @@
       </section>
    </div>
 
-   <ul class="menu__links">
+   <ul class="menu__links__bottom">
       <li class="menu__item menu__item--show" >
          <a href="#">
          categorias

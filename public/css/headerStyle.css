@@ -8,29 +8,13 @@ a:link, a:visited, a:active {
   color: #fff;
 }
   
-  div i {
-    color: white;
-  }
-  header{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: space-between;
-    background-color: #303335;
-    width: 100%;
-    align-items: center;
-    margin: auto;
-  }
   .logo a img{
     width: 100%;
-  }
-  .logo{
-    width: 30%;
   }
   .search1{
     background-color: white;
     border-radius: 5px;
-    width: 300px;
+    width: 90%;
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -38,24 +22,11 @@ a:link, a:visited, a:active {
     background-color: #097be6;
     color: white;
     border-radius: 5px;
-    width: 45px;
+    width: 10%;
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  .cart{
-    font-size: 30px;
-    padding-left: 5px;
-  }
-  .nav-mobile{
-    display: flex;
-    justify-content: space-around;
-    margin:auto;
-  }
-  
-  .nav-desktop{
-    display: none;
-  }
   .nav-bottom{
     display: none;
   }
@@ -63,21 +34,24 @@ a:link, a:visited, a:active {
 
   @media(min-width: 1024px){
     header{
+      background-color: #303335;
       display: flex;
+      align-items: center;
+      margin: auto;
+      justify-content: space-between;
 
     }
     .logo{
       width: 20%;
     }
     .search{
-      width: 20%;
-    }
-    .nav-mobile{
-      display: none;
-    }
-    .nav-desktop{
+      width: 40%;
       display: flex;
-      align-items: center;
+      padding: 10px;
+    }
+
+    .nav-top{
+      width: 40%;
     }
     .perfil-usuario{
       display: flex;
@@ -89,13 +63,36 @@ a:link, a:visited, a:active {
       margin-right: 5px;
     }
     .menu__links__top{
-      width: 15%;
-      padding: 0;
-      font-size: 24px;
-    }
-    .cart{
+      text-decoration: none;
+      list-style: none;
+      color: #fff;
+      transition: transform .5s;
+      display: flex;
+      width: 40%;
+      justify-content: space-around;
       font-size: 14px;
-      margin-right: 10px;
+    }
+    .menu__item__top{
+      list-style: none;
+      position: relative;
+      height: 100%;
+      --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+      --transform: rotate(0);
+    }
+    .menu__item__top:hover{
+      --clip: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+      --transform: rotate(-90deg);
+    }
+    .menu__nesting__top{
+      clip-path: var(--clip);
+      list-style: none;
+      transition: clip-path .3s;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: max-content;
+      transform: translateY(100%);
+      background-color: #000;
     }
 
     .direccion-user{
@@ -128,7 +125,7 @@ a:link, a:visited, a:active {
       width: 100%;
       color: #fff;
     }
-    .menu__links{
+    .menu__links__bottom{
       height: 100%;
       text-decoration: none;
       list-style: none;
