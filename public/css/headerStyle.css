@@ -1,5 +1,11 @@
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color: #fff;
 }
   
   div i {
@@ -36,18 +42,21 @@
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .burguer-menu{
-    font-size: 30px;
-  }
+  
   .cart{
     font-size: 30px;
     padding-left: 5px;
   }
   .nav-mobile{
     display: flex;
-    padding-right: 10px;
+    justify-content: space-around;
+    margin:auto;
   }
+  
   .nav-desktop{
+    display: none;
+  }
+  .nav-bottom{
     display: none;
   }
   
@@ -102,19 +111,7 @@
     .favoritos, .notificaciones{
       font-size: 20px;
     }
-    .nav-bottom{
-      background-color: #303335;
-      color: white; 
-      display: flex;
-      align-items: center;
-    }
-    .nav-bottom ul{
-      display: flex;
-      justify-content: space-around;
-      list-style: none;
-      padding-bottom:  5px;
-      width: 50%;
-    }
+
     .direccion-user{
       display: flex;
       width: 10%;
@@ -123,66 +120,82 @@
     }
     .direccion-user{
       font-size: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
     .direccion-user section{
       margin-left: 3px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
     }
     .cp{
       font-weight: bold;
     }
-    .menu-navs{
-      color: white;
+   
+    .nav-bottom{
       display: flex;
-      position: absolute;
-      
-    }
-    .menu-navs ul{
+      justify-content: space-around;
+      align-items: center;
       background-color: #303335;
-      border-radius: 5px;
+      width: 100%;
+      color: #fff;
+    }
+    .menu__links{
+      height: 100%;
+      text-decoration: none;
       list-style: none;
-      padding: 10px;
-      border: solid 1px white;
+      color: #fff;
+      transition: transform .5s;
+      display: flex;
+      font-size: 12px;
+      width: 75%;
     }
-    .categoriasNav{
+    .menu__item{
+      list-style: none;
       position: relative;
-      left: 180px;
+      height: 100%;
+      margin-right: 30px;
+      --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+      --transform: rotate(0);
     }
-    .nosotrosNav{
-      position: relative;
-      left: 155px;
-    }
-    .ayudaNav{
-      position: relative;
-      left: 155px;
-    }
-    .comunidadNav{
-      position: relative;
-      left: 145px;
-    }
-    .blogNav{
-      position: relative;
-      left: 160px;
-    }
-    .miCuentaNav{
-      position: relative;
-      left: 160px;
-      bottom: 55px;
-    }
-    .comprasNav{
-      position: relative;
-      left: 110px;
-      bottom: 55px;
-    }
-    .favoritosNav{
-      position: relative;
-      left: 80px;
-      bottom: 55px;
-    }
-    .notificacionesNav{
-      position: relative;
-      right: 15px;
-      bottom: 55px;
+    .menu__item:hover{
+      --clip: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+      --transform: rotate(-90deg);
     }
 
+    .menu__nesting{
+      clip-path: var(--clip);
+      list-style: none;
+      transition: clip-path .3s;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: max-content;
+      transform: translateY(100%);
+      background-color: #000;
+    }
 
+    .menu__arrow{
+      transform: var(--transform);
+      transition: transform .3s;
+      margin-left: 3px;
+
+    }
+    
+    .menu__link{
+      color: #fff;
+      padding: 0 30px;
+      text-decoration: none;
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+    .menu_link--inside{
+      padding: 20px;
+    }
+    .menu_link--inside{
+      background-color: #5d5e5f;
+    }
   }

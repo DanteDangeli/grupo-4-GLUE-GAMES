@@ -8,24 +8,29 @@
     <div class="logo">
         <a href="/"><img src="/images/logo-gluegames.png" class="logo" alt="logo GlueGames"></a>
      </div>
-     
-        
-        <form method="post" action="/search">
-            <input class="search1" type="text" placeholder="buscar un producto" name="buscado">
-            
-            <input class="searchButton" type="submit" value="buscar">
 
-            
-        </form>
-   
+     <form method="post" action="/search">
+      <input class="search1" type="text" placeholder="buscar un producto" name="buscado">
+      
+      <input class="searchButton" type="submit" value="buscar">
+
+      
+  </form>
+
      <nav class="nav-mobile">
-     <div class="burguer-menu">
-        <i class="fas fa-bars"></i>
-     </div>
-     <div class="cart">
-        <i class="fas fa-shopping-cart"></i>
-     </div>
-    </nav>
+
+      <div class="cart">
+         <i class="fas fa-shopping-cart"></i>
+      </div>
+
+      <div class="burguer-menu">
+         <i class="fas fa-bars menu__img"></i>
+      </div>
+     </nav>
+        
+        
+   
+     
      <nav class="nav-desktop">
       <div class="perfil-usuario">
          <% if (locals.isLogged) { %>
@@ -54,8 +59,10 @@
       <div class="cart">
          <i class="fas fa-shopping-cart"></i>
       </div>
+
      </nav>
 </header>
+
 <nav class="nav-bottom">
    <div class="direccion-user">
       <i class="fas fa-map-marker-alt"></i>
@@ -63,58 +70,160 @@
          <p>enviar a</p>
          <p class="cp">CP 00000</p>
       </section>
-      
    </div>
-   <ul>
-      <li class="categoriasMain">categorias</li>
-      <li>nosotros</li>
-      <li>ayuda</li>
-      <li>comunidad</li>
-      <li>blog</li>
+   <ul class="menu__links">
+      <li class="menu__item menu__item--show" >
+         <a href="#">
+         categorias
+         <i class="fas fa-chevron-down menu__arrow"></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">playstation</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">xbox</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">nintendo</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         nosotros
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">playstation</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">xbox</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">nintendo</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         ayuda
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">playstation</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">xbox</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">nintendo</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         comunidad
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">playstation</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">xbox</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">nintendo</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         blog
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">juegos de acción</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">realidad virtual</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">audifonos gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">teclados gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">playstation</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">xbox</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">nintendo</a>
+            </li>
+         </ul>
+      </li>
+
+     
    </ul>
-</nav>
-<nav class="menu-navs">
-   <ul class="categoriasNav">
-      <li>juegos descargables</li>
-      <li>play5</li>
-      <li>xbox</li>
-      <li>gamer props</li>
-      <li>lego</li>
-      <li>otros</li>
-      <li>merch</li>
-   </ul>
-   <ul class="nosotrosNav">
-      <li>equipo</li>
-      <li>historia</li>
-      <li>nuestro sueño</li>
-   </ul>
-   <ul class="ayudaNav">
-      <li>aplicacion</li>
-      <li>cambios</li>
-      <li>garantias</li>
-      <li>formas de pago</li>
-   </ul>
-   <ul class="comunidadNav">
-      <li>gamers pros</li>
-      <li>todos</li>
-   </ul>
-   <ul class="blogNav">
-      <li>recientes</li>
-      <li>hacks</li>
-      <li>equipos</li>
-      <li>como monetizar</li>
-   </ul>
-   <ul class="miCuentaNav">
-      <li>Tu cuenta</li>
-   </ul>
-   <ul class="comprasNav">
-      <li>compras recientes</li>
-   </ul>
-   <ul class="favoritosNav">
-      <li>tus favs</li>
-   </ul>
-   <ul class="notificacionesNav">
-      <li>tus notificaciones</li>
-   </ul>
+
    <script src="/js/header.js"></script>
 </nav>
