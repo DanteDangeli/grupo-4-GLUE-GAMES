@@ -24,13 +24,6 @@ const controller = {
         let pathCart= path.join(__dirname, '../views/products/productCart.ejs');
         res.render(pathCart)
         },
-    listarCategoria:(req, res) =>{
-        db.Productos.findAll({
-            limit:200
-        })
-        .then(productos => {res.render('../views/products/listadoProductosCategorias.ejs', {productos})} )
-        
-    },
     productSearch:(req, res) =>{
        let buscar =req.query.buscar;
        db.Productos.findAll({
@@ -39,6 +32,94 @@ const controller = {
            }
        })
        .then(productos => {res.render('../views/products/listadoBusqueda.ejs', {productos})} )
+    },
+    listarDepartamento1: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_departamento: 1
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    listarDepartamento2: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_departamento: 2
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    listarDepartamento3: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_departamento: 3
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    listarDepartamento4: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_departamento: 4
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    categoria1: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 1
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    categoria2: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 2
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    categoria3: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 3
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    categoria4: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 4
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    categoria5: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 5
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    categoria6: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 6
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    categoria7: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 7
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
     }
 }
 

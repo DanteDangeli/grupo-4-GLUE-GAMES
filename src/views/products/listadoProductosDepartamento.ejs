@@ -1,0 +1,37 @@
+<%-include('../partials/head')%>
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/listadoProductos.css">
+
+<body>
+    <%-include('../partials/header')%>
+    <section class="carrusel">
+        <img src="/images/homeImagenes/setup.jpg">
+    </section>
+    
+    <section class="ofertas">
+       
+          
+<% for(let i = 0; i < productos.length; i++) {  %>
+ 
+    <div class="producto-lista">
+          <a href="/products/detail/<%= productos[i].id %>"><img src="<%= productos[i].image %>" class="img-producto-lista"></a>
+         
+         
+          <div class="caja-datos-producto-lista">
+              <h3 class="nombre-producto-lista"><%= productos[i].nombre %></h3>
+              <p class="categoria-marca-lista">default | default</p>
+              <div class="box-precio-lista">
+                  <p class="descuento-lista">-0%</p>
+                  <p class="precio-unitario-lista">$00000</p>
+                  <p class="precio-lista"><%= productos[i].precio %></p>
+              </div>
+          </div>
+        
+
+
+        </div> 
+       <% } %> 
+      </section>
+
+
+</body>
