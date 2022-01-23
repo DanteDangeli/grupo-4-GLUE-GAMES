@@ -32,17 +32,14 @@ const controller = {
         
     },
     productSearch:(req, res) =>{
-        let busqueda = req.body.buscado;
-        console.log
-
-        db.Productos.findAll({
-            where: {
-                nombre: {[Op.like]: '%' + busqueda + '%'}
-            }
-        })
-        .then(productos => {res.render('../views/products/listadoBusqueda.ejs', {productos})})
+       let buscar =req.query.buscar;
+       db.Productos.findAll({
+           where:{
+               nombre: {[Op.like]:'%' + buscar + '%' }
+           }
+       })
+       .then(productos => {res.render('../views/products/listadoBusqueda.ejs', {productos})} )
     }
-    
-};
+}
 
 module.exports=controller;
