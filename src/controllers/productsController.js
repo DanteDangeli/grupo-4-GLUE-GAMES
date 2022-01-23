@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../../database/models');
+const Op = db.Sequelize.Op;
 
 
 const productFilepath = path.join(__dirname, '../json/productsDatabase.json');
@@ -25,10 +26,21 @@ const controller = {
         },
     listarCategoria:(req, res) =>{
         db.Productos.findAll({
-            limit:100
+            limit:200
         })
         .then(productos => {res.render('../views/products/listadoProductosCategorias.ejs', {productos})} )
         
+    },
+    productSearch:(req, res) =>{
+        let busqueda = req.body.buscado;
+        console.log
+
+        db.Productos.findAll({
+            where: {
+                nombre: {[Op.like]: '%' + busqueda + '%'}
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoBusqueda.ejs', {productos})})
     }
     
 };
