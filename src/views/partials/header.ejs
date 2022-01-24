@@ -10,8 +10,8 @@
      </div>
 
 <form method="get" action="/products/search" class="search" >
-      <input  type="text" name="buscar" placeholder="buscar un producto"class="search1">
-      <input  type="submit" value="buscar" class="searchButton">
+      <input  type="text" name="Buscar" placeholder="Buscar un producto"class="search1">
+      <input  type="submit" value="Buscar" class="searchButton">
 </form>
       
  <ul class="menu__links menu__links__top nav-top">
@@ -21,32 +21,34 @@
             <a href="/user/profile">
                 <img src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png">
                 <a href="/user/profile"><%= locals.userLogged.nombre %> </a>
+                <i class="fas fa-chevron-down menu__arrow"></i>
+                <ul class="menu__nesting__top">
+                  <li class="menu__inside">
+                     <a href="/user/profile" class="menu__link menu_link--inside">Mi cuenta</a>
+                  </li>
+                  <li class="menu__inside">
+                     <a href="/user/logout" class="menu__link menu_link--inside">Cerrar sesión</a>
+                  </li>
+                 
+               </ul>
                 </a>
         <% } else { %>
      <img src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png">
      <a href="/user/profile">Iniciar Sesión</a>
      <i class="fas fa-chevron-down menu__arrow"></i>
      <% } %>
-         <ul class="menu__nesting__top">
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">mi cuenta</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">cerrar sesión</a>
-            </li>
-           
-         </ul>
+
       </li>
 
 
       <li class="menu__item__top">
-         <a href="#">
+         <a>
             Mis compras
          <i class="fas fa-chevron-down menu__arrow"></i>
       </a>
          <ul class="menu__nesting__top">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">Por el momento no tienes compras</a>
+               <a class="menu__link menu_link--inside">Por el momento no tienes compras realizadas</a>
             </li>
            
          </ul>
@@ -58,7 +60,7 @@
       </a>
          <ul class="menu__nesting__top">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">Por el momento no tienes favoritos</a>
+               <a class="menu__link menu_link--inside">Por el momento no tienes favoritos</a>
             </li>
            
          </ul>
@@ -70,17 +72,17 @@
       </a>
          <ul class="menu__nesting__top">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">Por el momento no tienes notificaciones</a>
+               <a href="#" class="menu__link menu_link--inside">Aqui veras notificaciones cuando las recibas</a>
             </li>
            
          </ul>
          <li class="menu__item__top carrito">
-            <a href="#">
+            <a href="/products/productCart">
                <i class="fas fa-shopping-cart"></i>
          </a>
             <ul class="menu__nesting__top">
                <li class="menu__inside">
-                  <a href="#" class="menu__link menu_link--inside">carrito vacio</a>
+                  <a href="#" class="menu__link menu_link--inside">Carrito vacio</a>
                </li>
               
             </ul>
@@ -93,7 +95,7 @@
    <div class="direccion-user">
       <i class="fas fa-map-marker-alt"></i>
       <section>
-         <p>enviar a</p>
+         <p>Enviar a</p>
          <p class="cp">CP 00000</p>
       </section>
    </div>
@@ -101,108 +103,108 @@
    <ul class="menu__links__bottom">
       <li class="menu__item menu__item--show" >
          <a href="#">
-         categorias
+         Categorias
          <i class="fas fa-chevron-down menu__arrow"></i>
       </a>
          <ul class="menu__nesting">
             <li class="menu__inside">
-               <a href="/products/categoria1" class="menu__link menu_link--inside">juegos de acción</a>
+               <a href="/products/categoria1" class="menu__link menu_link--inside">Juegos de acción</a>
             </li>
             <li class="menu__inside">
-               <a href="/products/categoria2" class="menu__link menu_link--inside">realidad virtual</a>
+               <a href="/products/categoria2" class="menu__link menu_link--inside">Realidad virtual</a>
             </li>
             <li class="menu__inside">
-               <a href="/products/categoria3" class="menu__link menu_link--inside">audifonos gamer</a>
+               <a href="/products/categoria3" class="menu__link menu_link--inside">Audifonos gamer</a>
             </li>
             <li class="menu__inside">
-               <a href="/products/categoria4" class="menu__link menu_link--inside">teclados gamer</a>
+               <a href="/products/categoria4" class="menu__link menu_link--inside">Teclados gamer</a>
             </li>
             <li class="menu__inside">
-               <a href="/products/categoria5" class="menu__link menu_link--inside">playstation</a>
+               <a href="/products/categoria5" class="menu__link menu_link--inside">Playstation</a>
             </li>
             <li class="menu__inside">
-               <a href="/products/categoria6" class="menu__link menu_link--inside">xbox</a>
+               <a href="/products/categoria6" class="menu__link menu_link--inside">Xbox</a>
             </li>
             <li class="menu__inside">
-               <a href="/products/categoria7" class="menu__link menu_link--inside">nintendo</a>
-            </li>
-         </ul>
-      </li>
-
-      <li class="menu__item">
-         <a href="#">
-         nosotros
-         <i class="fas fa-chevron-down menu__arrow""></i>
-      </a>
-         <ul class="menu__nesting">
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">equipo</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">historia</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">nuestro sueño</a>
+               <a href="/products/categoria7" class="menu__link menu_link--inside">Nintendo</a>
             </li>
          </ul>
       </li>
 
       <li class="menu__item">
          <a href="#">
-         ayuda
+         Nosotros
          <i class="fas fa-chevron-down menu__arrow""></i>
       </a>
          <ul class="menu__nesting">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">acerca de la aplicación</a>
+               <a href="#" class="menu__link menu_link--inside">Equipo</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">cambios</a>
+               <a href="#" class="menu__link menu_link--inside">Historia</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">garantias</a>
-            </li>
-            <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">formas de pago</a>
+               <a href="#" class="menu__link menu_link--inside">Nuestro sueño</a>
             </li>
          </ul>
       </li>
 
       <li class="menu__item">
          <a href="#">
-         comunidad
+         Ayuda
          <i class="fas fa-chevron-down menu__arrow""></i>
       </a>
          <ul class="menu__nesting">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">gamers profesionales</a>
+               <a href="#" class="menu__link menu_link--inside">Acerca de la aplicación</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">aficionados</a>
+               <a href="#" class="menu__link menu_link--inside">Cambios</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">todos</a>
+               <a href="#" class="menu__link menu_link--inside">Garantias</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Formas de pago</a>
             </li>
          </ul>
       </li>
 
       <li class="menu__item">
          <a href="#">
-         blog
+         Comunidad
          <i class="fas fa-chevron-down menu__arrow""></i>
       </a>
          <ul class="menu__nesting">
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">posts recientes</a>
+               <a href="#" class="menu__link menu_link--inside">Gamers profesionales</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">hacks gaming</a>
+               <a href="#" class="menu__link menu_link--inside">Aficionados</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">recomendaciones de equipos</a>
+               <a href="#" class="menu__link menu_link--inside">Todos</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         Blog
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Posts recientes</a>
             </li>
             <li class="menu__inside">
-               <a href="#" class="menu__link menu_link--inside">monetiza tu talento</a>
+               <a href="#" class="menu__link menu_link--inside">Hacks gaming</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Recomendaciones de equipos</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Monetiza tu talento</a>
             </li>
              </ul>
       </li>
