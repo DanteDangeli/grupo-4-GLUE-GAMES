@@ -128,8 +128,9 @@
     }
     .menu-navs{
       color: white;
-      display: flex;
+      display: none;
       position: absolute;
+  
       
     }
     .menu-navs ul{
