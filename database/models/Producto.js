@@ -32,18 +32,9 @@ module.exports = (sequelize, dataTypes) => {
         marca_id: {
             type: dataTypes.INTEGER
         },
-        caracteristicas_principales: {
-            type: dataTypes.TEXT
-        },
         descripcion: {
             type: dataTypes.TEXT,
             allowNull: false
-        },
-        categorias_id: {
-            type: dataTypes.INTEGER
-        },
-        departamento_id: {
-            type: dataTypes.INTEGER
         },
         image: {
             type: dataTypes.STRING
@@ -57,4 +48,4 @@ module.exports = (sequelize, dataTypes) => {
 
     const Producto = sequelize.define(alias, cols, config)
     return Producto
-}
+ }

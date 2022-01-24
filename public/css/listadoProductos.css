@@ -82,4 +82,15 @@
      width: 80%;
      padding-left: 0;
     }
+}
+    @media(max-width:2560px){
+        .producto-lista{
+            width: 250px;  
+            height: 300px;
+        } 
+        .producto-lista a img{
+         width: 60%;
+         padding-left: 0;
+        } 
  }
+

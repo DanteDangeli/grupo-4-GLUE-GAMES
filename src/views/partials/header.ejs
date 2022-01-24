@@ -8,106 +8,209 @@
     <div class="logo">
         <a href="/"><img src="/images/logo-gluegames.png" class="logo" alt="logo GlueGames"></a>
      </div>
-     <div class="search">
-        <i class="fas fa-search"></i>
-     </div>
-     <nav class="nav-mobile">
-     <div class="burguer-menu">
-        <i class="fas fa-bars"></i>
-     </div>
-     <div class="cart">
-        <i class="fas fa-shopping-cart"></i>
-     </div>
-    </nav>
-     <nav class="nav-desktop">
-      <div class="perfil-usuario">
+
+<form method="get" action="/products/search" class="search" >
+      <input  type="text" name="buscar" placeholder="Buscar un producto"class="search1">
+      <input  type="submit" value="Buscar" class="searchButton">
+</form>
+      
+ <ul class="menu__links menu__links__top nav-top">
+
+      <li class="menu__item__top perfil-usuario">
          <% if (locals.isLogged) { %>
-                <a href="/user/profile">
-                    <img src="/images/users/<%= locals.userLogged.fotoPerfil %>">
-                    <a href="/user/profile"><%= locals.userLogged.nombre %> </a>
-                    <i class="fas fa-chevron-down"></i>
-                    </a>
-            <% } else { %>
-         <img src="/images/users/1637980580577-user.jpg">
-         <a href="/user/profile">Visitante</a>
-         <i class="fas fa-chevron-down"></i>
-         <% } %>
-      </div>
-      <div class="compras">
-         <p >Mis compras</p>
-         <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="favoritos">
-        
+            <a href="/user/profile">
+                <img src="/images/users/<%= userLogged.fotoPerfil %> ">
+                <a href="/user/profile"><%= locals.userLogged.nombre %> </a>
+                <i class="fas fa-chevron-down menu__arrow"></i>
+                <ul class="menu__nesting__top">
+                  <li class="menu__inside">
+                     <a href="/user/profile" class="menu__link menu_link--inside">Mi cuenta</a>
+                  </li>
+                  <li class="menu__inside">
+                     <a href="/user/logout" class="menu__link menu_link--inside">Cerrar sesión</a>
+                  </li>
+                 
+               </ul>
+                </a>
+        <% } else { %>
+     <img src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png">
+     <a href="/user/profile">Iniciar Sesión</a>
+     <i class="fas fa-chevron-down menu__arrow"></i>
+     <% } %>
+
+      </li>
+
+
+      <li class="menu__item__top">
+         <a>
+            Mis compras
+         <i class="fas fa-chevron-down menu__arrow"></i>
+      </a>
+         <ul class="menu__nesting__top">
+            <li class="menu__inside">
+               <a class="menu__link menu_link--inside">Por el momento no tienes compras realizadas</a>
+            </li>
+           
+         </ul>
+      </li>
+
+       <li class="menu__item__top">
+         <a href="#">
          <i class="far fa-heart"></i>
-      </div>
-      <div class="notificaciones">
+      </a>
+         <ul class="menu__nesting__top">
+            <li class="menu__inside">
+               <a class="menu__link menu_link--inside">Por el momento no tienes favoritos</a>
+            </li>
+           
+         </ul>
+      </li>
+
+      <li class="menu__item__top">
+         <a href="#">
          <i class="far fa-bell"></i>
-      </div>
-      <div class="cart">
-         <i class="fas fa-shopping-cart"></i>
-      </div>
-     </nav>
+      </a>
+         <ul class="menu__nesting__top">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Aqui veras notificaciones cuando las recibas</a>
+            </li>
+           
+         </ul>
+         <li class="menu__item__top carrito">
+            <a href="/products/productCart">
+               <i class="fas fa-shopping-cart"></i>
+         </a>
+            <ul class="menu__nesting__top">
+               <li class="menu__inside">
+                  <a href="#" class="menu__link menu_link--inside">Carrito vacio</a>
+               </li>
+              
+            </ul>
+      </li>
+   </ul>
+
 </header>
+
 <nav class="nav-bottom">
    <div class="direccion-user">
       <i class="fas fa-map-marker-alt"></i>
       <section>
-         <p>enviar a</p>
+         <p>Enviar a</p>
          <p class="cp">CP 00000</p>
       </section>
-      
    </div>
-   <ul>
-      <li class="categoriasMain">categorias</li>
-      <li>nosotros</li>
-      <li>ayuda</li>
-      <li>comunidad</li>
-      <li>blog</li>
+
+   <ul class="menu__links__bottom">
+      <li class="menu__item menu__item--show" >
+         <a href="#">
+         Categorias
+         <i class="fas fa-chevron-down menu__arrow"></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="/products/categoria1" class="menu__link menu_link--inside">Juegos de acción</a>
+            </li>
+            <li class="menu__inside">
+               <a href="/products/categoria2" class="menu__link menu_link--inside">Realidad virtual</a>
+            </li>
+            <li class="menu__inside">
+               <a href="/products/categoria3" class="menu__link menu_link--inside">Audifonos gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="/products/categoria4" class="menu__link menu_link--inside">Teclados gamer</a>
+            </li>
+            <li class="menu__inside">
+               <a href="/products/categoria5" class="menu__link menu_link--inside">Playstation</a>
+            </li>
+            <li class="menu__inside">
+               <a href="/products/categoria6" class="menu__link menu_link--inside">Xbox</a>
+            </li>
+            <li class="menu__inside">
+               <a href="/products/categoria7" class="menu__link menu_link--inside">Nintendo</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         Nosotros
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Equipo</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Historia</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Nuestro sueño</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         Ayuda
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Acerca de la aplicación</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Cambios</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Garantias</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Formas de pago</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         Comunidad
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Gamers profesionales</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Aficionados</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Todos</a>
+            </li>
+         </ul>
+      </li>
+
+      <li class="menu__item">
+         <a href="#">
+         Blog
+         <i class="fas fa-chevron-down menu__arrow""></i>
+      </a>
+         <ul class="menu__nesting">
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Posts recientes</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Hacks gaming</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Recomendaciones de equipos</a>
+            </li>
+            <li class="menu__inside">
+               <a href="#" class="menu__link menu_link--inside">Monetiza tu talento</a>
+            </li>
+             </ul>
+      </li>
+
+     
    </ul>
-</nav>
-<nav class="menu-navs">
-   <ul class="categoriasNav">
-      <li>juegos descargables</li>
-      <li>play5</li>
-      <li>xbox</li>
-      <li>gamer props</li>
-      <li>lego</li>
-      <li>otros</li>
-      <li>merch</li>
-   </ul>
-   <ul class="nosotrosNav">
-      <li>equipo</li>
-      <li>historia</li>
-      <li>nuestro sueño</li>
-   </ul>
-   <ul class="ayudaNav">
-      <li>aplicacion</li>
-      <li>cambios</li>
-      <li>garantias</li>
-      <li>formas de pago</li>
-   </ul>
-   <ul class="comunidadNav">
-      <li>gamers pros</li>
-      <li>todos</li>
-   </ul>
-   <ul class="blogNav">
-      <li>recientes</li>
-      <li>hacks</li>
-      <li>equipos</li>
-      <li>como monetizar</li>
-   </ul>
-   <ul class="miCuentaNav">
-      <li>Tu cuenta</li>
-   </ul>
-   <ul class="comprasNav">
-      <li>compras recientes</li>
-   </ul>
-   <ul class="favoritosNav">
-      <li>tus favs</li>
-   </ul>
-   <ul class="notificacionesNav">
-      <li>tus notificaciones</li>
-   </ul>
+
    <script src="/js/header.js"></script>
 </nav>

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px solid red;*/
+  }
+  
+  
+  
+  .body{  
+      background: #333333;
+  }
+  
+  .user__detail__container{
+    width: 80%;
+    background-color: #484949;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .image__user{
+    padding-left: 40px;
+    width: 40%;
+  }
+  .image__user img{
+    padding-left: 80px;
+    padding-top: 30px;
+    block-size: 300px;
+    width: max-content;
+    border-radius: 5px;
+  }
+  .box__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+  }
+  .container__name{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .container__name i{
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  .precioNeto{
+    font-size: 30px;
+    font-weight: lighter;
+  }
+  .cantidad__comprar{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+  }
+  .botones{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .botones div{
+    width: 50%;
+    height: 38px;
+  }
+  .botones div input{
+    width: 100%;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .descripcion{
+    width: 98%;
+    background-color: #484949;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 15px;
+    color: #fff;
+    margin-bottom: 300px;
+  }
+  .botones__de__administrador{
+    display: flex;
+  }
+  .botones__de__administrador input{
+    background-color: rgb(221, 5, 5);
+    color: white;
+    width:150px;
+    height: 28px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  h2.user{
+    padding-left: 80px;
+    color: white;
+
+    }
+  h3.user{
+      padding-bottom: 20px;
+  
+  }
+
+  a.botones{
+    padding-left: 30px;
+    color:white;
+    padding-bottom: 10px;
+
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
