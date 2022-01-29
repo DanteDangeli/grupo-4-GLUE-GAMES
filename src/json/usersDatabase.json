@@ -252,5 +252,16 @@
   "password": "$2a$10$D/P4M6Uj.d1k3LjXHD7NEeXdOziHKyvVU3F53nCFKX.OrG1jMcG1q",
   "confirmar": "mashumishu",
   "avatar": "1642632243225-user.png"
+ },
+ {
+  "id": 5,
+  "nombre": "test35",
+  "apellido": "test35",
+  "usuario": "test35",
+  "email": "test35@test35.com",
+  "fechaNacimiento": "2022-01-13",
+  "password": "$2a$10$jPuVMidFwtY64hrW.NfgG.ICZj65sREVN2Rmuul3xeggzb.Re2BQC",
+  "confirmar": "mashumishu",
+  "avatar": "1643063449453-user.jpg"
  }
 ]
