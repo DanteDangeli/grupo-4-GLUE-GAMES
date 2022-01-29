@@ -26,7 +26,9 @@ router.get('/login', guestMiddleware,userController.login);
 router.post('/login', userController.loginProcess);
 
 // Perfil de usuario
-router.get('/profile', authMiddleware, userController.profile);
+router.get('/profile',authMiddleware,userController.profile);
+router.get('/editar/:id',authMiddleware, userController.editarForm);
+router.post('/editar/:id',authMiddleware,upload.single("fotoPerfil"),userController.editar);
 
 // Logout
 router.get('/logout', userController.logout);

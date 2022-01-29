@@ -8,7 +8,11 @@
    
 <div class="product__detail__container">
     <div class="image__product">
-        <img src="<%= product.image %>>">
+            <% if(product.image.indexOf('h') != -1){ %>
+                <img src="<%= product.image %>" class="img-producto-lista">
+          <%  } else{ %>
+            <img src="/images/<%= product.image %>" class="img-producto-lista">
+        <%  } %>
     </div>
     <div class="box__details">
        <div class="container__name"> 

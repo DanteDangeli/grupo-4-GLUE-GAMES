@@ -14,8 +14,15 @@
 <% for(let i = 0; i < productos.length; i++) {  %>
  
     <div class="producto-lista">
-          <a href="/products/detail/<%= productos[i].id %>"><img src="<%= productos[i].image %>" class="img-producto-lista"></a>
-         
+        <a href="/products/detail/<%= productos[i].id %>">
+
+            <% if(productos[i].image.indexOf('h') != -1){ %>
+                <img src="<%= productos[i].image %>" class="img-producto-lista">
+          <%  } else{ %>
+            <img src="/images/<%= productos[i].image %>" class="img-producto-lista">
+        <%  } %>
+        
+        </a>
          
           <div class="caja-datos-producto-lista">
               <h3 class="nombre-producto-lista"><%= productos[i].nombre %></h3>

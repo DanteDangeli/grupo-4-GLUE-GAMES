@@ -30,7 +30,7 @@
     padding-left: 80px;
     padding-top: 30px;
     block-size: 300px;
-    width: max-content;
+    width: 100%;
     border-radius: 5px;
   }
   .box__details{

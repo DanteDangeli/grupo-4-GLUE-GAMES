@@ -1,21 +1,22 @@
-const fs = require('fs');
 const path = require('path');
 const bcrypt = require("bcryptjs")
 const session = require('express-session')
-const User = require('../User');
 const {	validationResult } = require('express-validator');
+const db = require('../../database/models');
+const fs = require('fs');
 
 
-const usersFilepath = path.join(__dirname, '../json/usersDatabase.json');
-const users = JSON.parse(fs.readFileSync(usersFilepath, 'utf-8'));
+
 
 
 const controller = {
    login: (req, res)=>{
+	console.log(req.session.userLogeed, 'usuario logueado')
       let pathLogin = path.join(__dirname, '../views/users/login.ejs')
       res.render(pathLogin) 
    },
    registro: (req, res)=>{
+	   
       let pathRegistro = path.join(__dirname, '../views/users/registro.ejs')
       res.render(pathRegistro)
    },
@@ -30,10 +31,13 @@ const controller = {
 				oldData: req.body
 			});
 		}
-
-		let userInDB = User.findByField('email', req.body.email);
-
-		if (userInDB) {
+		let userInDB = db.Usuarios.findAll({
+			where:{
+				email:req.body.email
+			}
+		});
+	
+		if (userInDB == req.body.email) {
 			return res.render(pathRegister, {
 				errors: {
 					email: {
@@ -45,21 +49,23 @@ const controller = {
       }
 
          let userToCreate = {
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            avatar: req.file.filename
+            nombre: req.body.nombre,
+			apellido: req.body.apellido,
+			nombre_usuario: req.body.usuario,
+			email: req.body.email,
+			fecha_nacimiento: req.body.fechaNacimiento,
+			foto_usuario: req.file.filename,
+            pasword: bcrypt.hashSync(req.body.password, 10),  
          }
 
-         let userCreated = User.create(userToCreate);
+         db.Usuarios.create(userToCreate);
    
          return res.redirect('/user/login');
 		 
 
    },
 	loginProcess: (req, res) => {
-      let pathLogin = path.join(__dirname, '../views/users/login.ejs')
-      let pathProfile = path.join(__dirname, '../views/users/userProfile.ejs')
-		let userToLogin = User.findByField('email', req.body.email);
+		let pathLogin = path.join(__dirname, '../views/users/login.ejs')
 		let emptyEmail = req.body.email;
 		let emptyPassword = req.body.password;
 		var nada = []
@@ -81,49 +87,94 @@ const controller = {
 				}
 			});
 		} 
-
-		if(userToLogin) {
-			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-
-				if(req.body.mantener) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+		
+	
+	
+		db.Usuarios.findOne({
+			where:{
+				email: req.body.email
+			}
+		}).then((userToLogin)=>{
+			if(userToLogin){
+				let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.pasword);
+				if(isOkThePassword){
+					delete userToLogin.pasword;
+					req.session.userLogged = userToLogin;
+					if(req.body.mantener){
+						res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)* 60})
+					}
+					
+					return res.redirect('/user/profile')
+					
 				}
-
-				return res.redirect('/user/profile');
-			} 
+				return res.render(pathLogin, {
+					errors:{
+						email:{
+							msg: 'las credenciales son invalidas'
+						}
+					}
+				})
+			}
 			return res.render(pathLogin, {
-				errors: {
-					password: {
-						msg: 'Las credenciales son inválidas.'
+				errors:{
+					email:{
+						msg: 'email no encontrado'
 					}
 				}
-			});
+			})
+			
+			
+			
+			})
+			
+	
+},
+profile: (req, res) => {
+	console.log(req.cookies.userEmail, 'soy una cookie desde profile')
+	
+   let pathProfile = path.join(__dirname, '../views/users/userProfile.ejs')      
+	 return res.render(pathProfile, {
+		 user: req.session.userLogged
+	 })
+	 
+},
+editarForm:(req, res)=>{
+	let editarId = req.params.id;
+	db.Usuarios.findOne({
+		where:{
+			id:editarId
 		}
+	})
+	.then((usuario)=>{
+		res.render(path.join(__dirname, '../views/users/editarProfile.ejs'),{usuario})
+	})
+   
+},
+editar:(req, res)=>{
 
-		return res.render(pathLogin, {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
-	},
-
+	db.Usuarios.update({
+		nombre: req.body.nombre,
+		apellido: req.body.apellido,
+		nombre_usuario: req.body.usuario,
+		email: req.body.email,
+		fecha_nacimiento: req.body.fechaNacimiento
+		
+	},{
+		where:{
+			id: req.params.id
+		}
+	}).then(()=>{
+		res.redirect('/user/logout')
+	})
+},
 	logout: (req, res) => {
+		console.log(
+			'estoy en el logout')
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
-	},
+	}
    
-   profile: (req, res) => {
-      let pathProfile = path.join(__dirname, '../views/users/userProfile.ejs')      
-		return res.render(pathProfile, {
-			user: req.session.userLogged
-		});
-   },
 
 };
 

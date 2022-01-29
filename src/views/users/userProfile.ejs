@@ -9,28 +9,33 @@
 	
 	<div class="user__detail__container" style="margin-top: 40px;">
 			<div class="image__user">
-				<h2 class="user"> Hola <%= user.nombre %> </h2>
-				<img src="/images/users/<%= user.fotoPerfil %> ">
+				<h2 class="user"> Hola, <%=user.nombre %> </h2>
+				<img src="/images/users/<%= user.foto_usuario %> ">
 				<br>
                 <br>
 				</div>
 			<div class="box__details">	
 				<h3 class="user">Datos de la cuenta</h3>
-				<a class= "botones"> Usuario: <%= user.usuario %></a>
-				<a class= "botones"> Email: <%= user.email %></a>
+				<a class= "botones"> Usuario:  <%=user.nombre_usuario%> </a>
+				<a class= "botones"> Email:  <%=user.email %></a>
 				<br>
                 <br>
 				<h3>Datos personales</h3>
-				<a class= "botones"> Nombre: <%= user.nombre %></a>
-				<a class= "botones"> Apellido: <%= user.apellido %></a>
-				<a class= "botones"> Fecha de Nacimiento: <%= user.fechaNacimiento %></a>
+				<a class= "botones"> Nombre: <%=user.nombre%></a>
+				<a class= "botones"> Apellido:  <%=user.apellido%> </a>
+				<a class= "botones"> Fecha de Nacimiento: <%=user.fecha_nacimiento%> </a>
 				<br>
                 <br>
-				<h3>Acciones disponibles</h3>
+				<h3>Acciones de administrador</h3>
                 <a class= "botones" href="/admin/products/create"> Crear productos </a>
-                <a class= "botones" href="/products/search?buscar="> Editar productos </a>
+                <a class= "botones" href="/products/todos"> Editar productos </a>
+				
+                <br>
+				<h3>Acciones disponibles</h3>
+				<a class= "botones" href="/user/editar/<%= user.id %>"> Editar mi perfil </a>
 				<a class= "botones" href="/user/logout"> Cerrar sesión </a>
                 <br>
+				
 			</div>
 	</div>
 	
