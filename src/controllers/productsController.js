@@ -120,6 +120,10 @@ const controller = {
             }
         })
         .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    todos:(req, res)=>{
+        db.Productos.findAll()
+        .then((productos) => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
     }
 }
 

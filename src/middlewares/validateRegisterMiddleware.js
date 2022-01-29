@@ -13,8 +13,8 @@ module.exports = [
 		.isEmail().withMessage('Debes escribir un formato de correo válido.'),
 	body('password')
 		.notEmpty().withMessage('Tienes que escribir una contraseña.')
-		.isLength({ min : 8}).withMessage("La contraseña tener más de 8 caracteres."),
-	body('fechaNacimiento').notEmpty().withMessage('Tienes que escribir tu fecha de nacimiento.'),
+		.isLength({ min : 8}).withMessage("La contraseña debe tener más de 8 caracteres."),
+	body('fechaNacimiento').notEmpty().withMessage('Tienes que colocar tu fecha de nacimiento.'),
 	body('fotoPerfil').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif', 'jpeg'];

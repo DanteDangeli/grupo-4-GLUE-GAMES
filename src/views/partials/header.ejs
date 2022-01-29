@@ -19,8 +19,8 @@
       <li class="menu__item__top perfil-usuario">
          <% if (locals.isLogged) { %>
             <a href="/user/profile">
-                <img src="/images/users/<%= userLogged.fotoPerfil %> ">
-                <a href="/user/profile"><%= locals.userLogged.nombre %> </a>
+                <img src="/images/users/<%=locals.userLogged.foto_usuario%>">
+                <a href="/user/profile"> <%= locals.userLogged.nombre_usuario %> </a>
                 <i class="fas fa-chevron-down menu__arrow"></i>
                 <ul class="menu__nesting__top">
                   <li class="menu__inside">
@@ -93,10 +93,14 @@
 
 <nav class="nav-bottom">
    <div class="direccion-user">
-      <i class="fas fa-map-marker-alt"></i>
       <section>
-         <p>Enviar a</p>
-         <p class="cp">CP 00000</p>
+         <p>Enviar a :</p>
+         <% if (locals.isLogged) { %>
+            <p class="cp"><%= locals.userLogged.nombre %> <%= locals.userLogged.apellido %></p>
+        <% } else { %>
+         <p class="cp">por definir</p>
+     <% } %>
+        
       </section>
    </div>
 

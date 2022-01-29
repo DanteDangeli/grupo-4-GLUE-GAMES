@@ -53,6 +53,10 @@ input{
 .foto{
   margin-bottom: 15px;
 }
+.editar__imagen__perfil{
+  width: 60px;
+  height: 60px;
+}
 
 .contraseñas{
   display: flex;
@@ -89,6 +93,13 @@ input{
 input{
   border-radius: 5px;
   height: 35px;
+}
+.editar__imagen{
+  width: 60px;
+  height: 60px;
+}
+.editar__imagen img{
+  width: 100%;
 }
 
 @media(min-width:768px ){

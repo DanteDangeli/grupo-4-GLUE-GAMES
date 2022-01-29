@@ -5,77 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap">
-    <script src="https://kit.fontawesome.com/cd8fa35da4.js" crossorigin="anonymous"></script>
+    <script src="/js/validator.js"></script>
     <link rel="stylesheet" href="/css/style-registro.css">
     <title>registro</title>
 </head>
 <body>
 
-  <form method="post" action="/admin/products/edit/<%= product.id %>?_method=put" >
-   <a href="/"> <img src="/images/logo-gluegames.png" alt="logo" class="logo"> </a>
+</div>
+  <form method="POST" class="crearProducto" action="/admin/products/edit/<%= producto.id %>" enctype="multipart/form-data" >
+    <figure class="logo">
+        <a href="/"> <img src="/images/logo-gluegames.png" alt="logo" > </a>
+    </figure>
 
 
    <div class="formulario">
     <div>
-        <h2>EDITAR PRODUCTO</h2>
+        <h2>Editar Producto</h2>
     </div>
+    <div class="erroresCrearProducto">
+        <ul class="text-danger-v2"></ul> </div>
     <div>
-        <label for="nombreProducto">Nombre del producto</label>
-        <input type="text" name="producto" id="nombreProducto" class="control" placeholder="actual: <%= product.producto %>">
-    </div>
-    <div>
-        <label for="descripcion">Descripcion</label>
-        <textarea name="descripcion" id="descripcion" class="control"><%= product.descripcion %></textarea>
-    </div>
-
-    <div>
-        <label for="fotoProducto">Foto del producto</label>
-        <input type="file" name="fotoProducto" id="fotoProducto">
-    </div>
-
-   <div>
-       <h4>categoria del producto. "actual: <%= product.categorias %>"</h4>
-       <label for="categoria-videojuegos">videojuegos</label>
-       <input type="radio" name="categoria" value="videojuegos">
-
-       <label for="categoria-consolas">consolas</label>
-       <input type="radio" name="categoria" value="consolas">
-
-       <label for="categoria-coleccionables">coleccionables</label>
-       <input type="radio" name="categoria" value="coleccionables">
-
-       <label for="categoria-accesorios">accesorios</label>
-       <input type="radio" name="categoria" value="accesorios">
-
-   </div>
-   <div>
-       <label for="marca">marca</label>
-       <input type="text" name="marca" id="marca" class="marca" placeholder="actual:<%= product.marca %>">
-   </div>
-
-   <div>
-    <label for="precio">precio</label>
-    <input type="text" name="precio" id="precio" class="precio" placeholder="actual:<%= product.precio %>">
-    </div>
-
-        <div>
-        <label for="valoracion">Estrellas</label>
-        <input type="text" name="valoracion" id="valoracion" class="valoracion" placeholder="actual: <%= product.valoracion %>">
+        <div class="email">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>">
         </div>
-             <div>
-            <label for="condicion">Condicion</label>
-            <input type="text" name="condicion" id="condicion" class="condicion" placeholder="actual: <%= product.condicion %>">
-            </div>
 
-                <div>
-                <label for="id">id</label>
-                <input type="text" name="id" id="id" class="id">
-                </div>
+        <div class="email">
+            <label for="precio">Precio</label>
+            <input type="text" name="precio" id="precio" value="<%= producto.precio %>">
+        </div>      
+        
+        <div class="email">
+            <label for="descripcion">Descripción</label>
+            <input type="text" name="descripcion" id="descripcion" value="<%= producto.descripcion %>" >
+        </div>      
+<div class="foto">
+    <label for="fotoProducto">Foto actual de producto</label>
+    <% if(producto.image.indexOf('h') != -1){ %>
+        <img src="<%= producto.image %>" class="img-producto-lista editar__imagen">
+  <%  } else{ %>
+    <img src="/images/<%= producto.image %>" class="img-producto-lista editar__imagen">
+<%  } %>
+    <input type="file" name="fotoProducto" id="fotoPerfil"  value="editar foto">
+</div>
+
+    </div>
    
-    <div class="botones">
-
-       <button type="submit">Editar producto</button>
-
+    <div class="boton">
+        <button type="submit">Editar</button>
+        <button type="reset">Limpiar</button>
     </div>
 </div>
 </form>

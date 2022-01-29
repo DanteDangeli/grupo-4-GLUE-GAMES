@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap">
+    <script src="/js/validator.js"></script>
+    <link rel="stylesheet" href="/css/style-registro.css">
+    <title>registro</title>
+</head>
+<body>
+
+
+  <form method="POST" action="/user/editar/<%= usuario.id %>" enctype="multipart/form-data" class="register">
+
+    <figure class="logo">
+        <a href="/"> <img src="/images/logo-gluegames.png" alt="logo" > </a>
+    </figure>
+   
+   
+   <h1>EDITAR PERFIL</h1>
+
+  
+    <div class = 'text-danger errores'>
+        <ul></ul>
+        <% if (locals.errors && errors.nombre) { %>
+            <div class="text-danger">
+                <%= errors.nombre.msg %>
+            </div>
+        <% } %>
+        <% if (locals.errors && errors.apellido) { %>
+            <div class="text-danger">
+                <%= errors.apellido.msg %>
+            </div>
+        <% } %>
+        <% if (locals.errors && errors.usuario) { %>
+            <div class="text-danger">
+                <%= errors.usuario.msg %>
+            </div>
+        <% } %>
+        <% if (locals.errors && errors.email) { %>
+            <div class="text-danger">
+                <%= errors.email.msg %>
+            </div>
+        <% } %>
+        <% if (locals.errors && errors.fechaNacimiento) { %>
+            <div class="text-danger">
+                <%= errors.fechaNacimiento.msg %>
+            </div>
+        <% } %>
+    </div>
+<div class="nombreCompleto">
+    <div class="nombre">
+    <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" class="nombre" value="<%= usuario.nombre %>">
+    </div>
+    <div class="apellido">
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido" class="control" value="<%= usuario.apellido %>">
+    </div>
+</div>
+<br>
+    <div class="userName">
+        <label for="usuario">Nombre de usuario</label>
+        <input type="text" name="usuario" id="usuario" class="control" value="<%= usuario.nombre_usuario %>">
+    </div>
+    <div class="email">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="control" value="<%= usuario.email %>">
+    </div>
+    <div class="fecha">
+        <label for="fechaNacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="control" value="<%= usuario.fecha_nacimiento %>">
+    </div>
+    <div class="foto">
+        <label for="fotoPerfil">Foto de usuario</label>
+        <img src="/images/users/<%= usuario.foto_usuario %>" class="editar__imagen__perfil">
+        
+    </div>
+   
+    <div class="boton">
+       <button type="submit">Editar</button>
+    </div>
+   
+
+
+</form>
+<script src="/js/editPerfil.js" ></script>
+</body>
+</html>
