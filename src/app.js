@@ -35,6 +35,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 // sistema de rutas --> "requiriendo las rutas"
 const mainRouter = require('./routes/main');
+const wipController = require('./routes/wip');
 const productsController = require('./routes/products');
 const adminProductsController = require('./routes/adminProducts');
 const usersController = require('./routes/users');
@@ -44,6 +45,7 @@ const usuariosApi = require('./routes/api/usuarios');
 
 // usando las rutas requeridas ---> puntos de entrada
 app.use('/', mainRouter);
+app.use('/wip', wipController);
 app.use('/products', productsController);
 app.use('/admin', adminProductsController);
 app.use('/user', usersController);
