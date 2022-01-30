@@ -4,6 +4,10 @@
     justify-content: space-around;
 }
 
+.departamento-nombre  {
+    color: white;
+    text-transform: capitalize;
+}
 
 .producto-lista{
     display: flex;

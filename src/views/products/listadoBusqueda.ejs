@@ -24,11 +24,11 @@
         </a>
           <div class="caja-datos-producto-lista">
               <h3 class="nombre-producto-lista"><%= productos[i].nombre %></h3>
-              <p class="categoria-marca-lista">default | default</p>
+              <p class="categoria-marca-lista"><%= productos[i].marca %> | <%= productos[i].categoria %></p>
               <div class="box-precio-lista">
-                  <p class="descuento-lista">-0%</p>
-                  <p class="precio-unitario-lista">$00000</p>
-                  <p class="precio-lista"><%= productos[i].precio %></p>
+                  <p class="descuento-lista">-<%= productos[i].descuento %></p>
+                  <p class="precio-unitario-lista"> $ <%= productos[i].precio_lista %></p>
+                  <p class="precio-lista"> $ <%= productos[i].precio %></p>
               </div>
           </div>
         

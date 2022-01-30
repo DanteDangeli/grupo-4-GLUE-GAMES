@@ -6,16 +6,15 @@
 }
 
 
-
 .body{  
     background: #333333;
 }
 
 .product__detail__container{
-  width: 98%;
+  width: 90%;
   background-color: #484949;
   border-radius: 5px;
-  margin: 10px auto;
+  margin: 40px auto;
   padding: 15px;
   color: #fff;
   display: flex;
@@ -25,7 +24,8 @@
   width: 40%;
 }
 .image__product img{
-  width: 100%;
+  margin-left: 50px;
+  width: 80%;
   border-radius: 5px;
 }
 .box__details{
@@ -45,7 +45,7 @@
 }
 .precioNeto{
   font-size: 30px;
-  font-weight: lighter;
+  font-weight: inherit;
 }
 .cantidad__comprar{
   display: flex;
@@ -69,13 +69,13 @@
   font-size: 16px;
 }
 .descripcion{
-  width: 98%;
+  width: 90%;
   background-color: #484949;
   border-radius: 5px;
   margin: 0 auto;
   padding: 15px;
   color: #fff;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
 }
 .botones__de__administrador{
   display: flex;

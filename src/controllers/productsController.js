@@ -121,6 +121,42 @@ const controller = {
         })
         .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
     },
+
+    categoria8: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 8
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+
+    categoria9: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 9
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+    categoria10: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 10
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+
+    categoria11: (req, res)=>{
+        db.Productos.findAll({
+            where:{
+                id_categoria: 11
+            }
+        })
+        .then(productos => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )
+    },
+
     todos:(req, res)=>{
         db.Productos.findAll()
         .then((productos) => {res.render('../views/products/listadoProductosDepartamento.ejs', {productos})} )

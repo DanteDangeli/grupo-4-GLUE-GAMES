@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/css/productsDetail.css">
 <body>
     <%-include('../partials/header')%>
-   
+  <br> 
 <div class="product__detail__container">
     <div class="image__product">
             <% if(product.image.indexOf('h') != -1){ %>
@@ -20,21 +20,35 @@
         <i class="far fa-heart"></i>
        </div>
    
-    <h2 class="precioNeto"> 
+    <h2 class="precioNeto"> $ 
         <%=product.precio %> 
     </h2>
+    <h3 class="title__stock">Stock disponible</h3>
+    <h2> <% if (product.precio > 150) {  %>  
+         <h2> Envio gratuito     </h2>
+         <p>El costo del producto es superior a $150, por lo que el envio será gratuito!</p>
+
+         <%  } else{ %>
+            <h2> Con costo de envio     </h2>
+            <p>Agrega más productos a tu carrito para que el envio sea gratuito.</p>
+            <%  } %>
+    </h2>
    
-    <div class="detalles__logisticos">
-        TIPO DE ENVIO POR DEFINIR
+    <div class="detalles-producto">
+        <div class="detalles-producto">
+            Categoria:  <a href="/products/categoria<%= product.id_categoria %>"> <%=product.categoria %> </a>
+        </div>
+<br>
+        <div class="detalles-producto">
+            Marca:  <a> <%=product.marca %> </a>
+        </div>
+
     </div>
     <div class="box__stock">
-        <h3 class="title__stock">Stock disponible</h3>
+
         <div class="cantidad__comprar">
             <p>Cantidad: </p>
-            <p>1 unidad</p>
-        </div>
-        <div class="disponibles">
-            (desconocido cantidad disponibles)
+            <p><%=product.stock %> unidades </p>
         </div>
     </div>
     <div class="botones">
@@ -49,11 +63,11 @@
         <% if (locals.isLogged) { %>
 
             <a href="/admin/products/edit/<%= product.id %>">
-            <input type="button" value="EDITAR PRODUCTO">
+            <input type="button" value="Editar Producto">
             </a>
             
             <form action="/admin/products/delete/<%= product.id %>?_method=delete" method="POST" name="eliminar">
-                <input type="submit" value="ELIMINAR PRODUCTO">
+                <input type="submit" value="Eliminar producto">
             </form>
             <% } else { %>
             <% } %>

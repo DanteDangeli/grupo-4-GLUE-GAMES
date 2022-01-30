@@ -31,7 +31,7 @@
     padding-top: 30px;
     block-size: 300px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
   }
   .box__details{
     display: flex;

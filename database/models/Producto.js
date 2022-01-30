@@ -17,6 +17,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
+        precio_lista:{
+            type: dataTypes.STRING,
+            allowNull: false
+        },
         id_categoria: {
             type: dataTypes.INTEGER
         },
@@ -26,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         tipo_envio_id:{
             type: dataTypes.INTEGER
         },
-        stock_id: {
+        stock: {
             type: dataTypes.INTEGER
         },
         marca_id: {
@@ -36,9 +40,25 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT,
             allowNull: false
         },
+        departamento: {
+            type: dataTypes.TEXT,
+            allowNull: false
+        },
+        categoria: {
+            type: dataTypes.TEXT,
+            allowNull: false
+        },
+        marca: {
+            type: dataTypes.TEXT,
+            allowNull: false
+        },
         image: {
             type: dataTypes.STRING
-        }
+        },
+        descuento: {
+            type: dataTypes.TEXT,
+            allowNull: false
+        },
     };
 
     let config = {
