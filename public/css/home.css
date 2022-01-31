@@ -66,8 +66,12 @@ body {
   display: none;
 }
 .producto-oferta img {
-  width: 60%;
-  margin: auto;
+  width: 300px;
+  height: 300px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .caja-datos-producto {
   display: flex;
@@ -118,9 +122,13 @@ body {
   margin-top: 10px;
 }
 .producto-novedad img {
-  width: 40%;
-  margin: auto;
-}
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  }
 
 footer {
   width: 100%;
@@ -243,9 +251,6 @@ footer {
   #producto-oferta-desk {
     display: flex;
   }
-  .producto-oferta img {
-    width: 50%;
-  }
   .ofertas {
     margin-bottom: 100px;
   }
@@ -256,10 +261,6 @@ footer {
   p,
   div {
     font-size: 14px;
-  }
-
-  .producto-novedad img {
-    width: 50%;
   }
 }
 
@@ -274,13 +275,13 @@ footer {
     box-shadow: 0px 0px 30px rgb(100, 100, 100);
   }
   .producto-oferta {
-    width: 45%;
-    height: 500px;
+    width: 30%;
+    height: 480px;
   }
 
   .producto-novedad {
-    width: 45%;
-    height: 510px;
+    width: 20%;
+    height: 420px;
   }
 
   .footer-redes {
