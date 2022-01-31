@@ -18,6 +18,10 @@
 --
 -- Table structure for table `carrito_de_compras`
 --
+DROP DATABASE IF EXISTS GLUE_GAMES;
+CREATE DATABASE GLUE_GAMES;
+USE GLUE_GAMES;
+
 
 DROP TABLE IF EXISTS `carrito_de_compras`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

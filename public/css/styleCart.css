@@ -249,7 +249,7 @@
     }
 }
 
-@media (min-width:1199px) {
+@media (min-width:1024px) {
    .cart-view {
        width: 70%;
        border-radius: 8px;
