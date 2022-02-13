@@ -8,6 +8,13 @@ const cookies = require('cookie-parser');
 // express()
 const app = express();
 
+//habilitar las malditas politicas de cors de la puta app
+app.use(function(req,res, next){
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-with, Content-Type, Accept');
+	next();
+});
+
 // sistema de session
 app.use(session({
 	secret: "Shhh, It's a secret",
@@ -40,6 +47,7 @@ const productsController = require('./routes/products');
 const adminProductsController = require('./routes/adminProducts');
 const usersController = require('./routes/users');
 const usuariosApi = require('./routes/api/usuarios');
+const productosApi = require('./routes/api/products');
 
 
 
@@ -50,6 +58,7 @@ app.use('/products', productsController);
 app.use('/admin', adminProductsController);
 app.use('/user', usersController);
 app.use('/usuariosApi', usuariosApi);
+app.use('/productosApi', productosApi);
 
 
 // error 404 y pagina de error
@@ -59,7 +68,7 @@ app.use((req, res, next) => {
 
 // levantando el servidor
 
-app.listen(3000, ()=>{
-    console.log('servidor en marcha...puerto 3000')
+app.listen(4000, ()=>{
+    console.log('servidor en marcha...puerto 4000')
 })
 

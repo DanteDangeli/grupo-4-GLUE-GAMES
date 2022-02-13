@@ -1,8 +1,8 @@
 module.exports= {
   "development": {
     "username": "root",
-    "password": "Mashumishu1!",
-    "database": "GLUE_GAMES",
+    "password": "CUCP990621DL6",
+    "database": "glue_games",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
